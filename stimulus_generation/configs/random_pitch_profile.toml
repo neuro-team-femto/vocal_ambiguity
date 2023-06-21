@@ -9,7 +9,7 @@ numFiles = 10
 # apply transformation in series (True) or parallel (False)
 chain = true
 
-transf = ["eq"]
+transf = ["pitch"]
 
 # generate experiment folder with name based on current time
 generateExpFolder = true
@@ -22,15 +22,10 @@ window.len = 0.04
 # number of hops per analysis window
 oversampling = 8
 
-[eq]
+[pitch]
 window.len = 0.1
 window.count = 5
 window.unit = 'n'
-std = 5
+std = 150
 trunc = 1
 BPFtype = 'ramp'
-# mel, linear
-scale = 'mel'
-band.count = 10
-min_freq = 0
-max_freq = nan
