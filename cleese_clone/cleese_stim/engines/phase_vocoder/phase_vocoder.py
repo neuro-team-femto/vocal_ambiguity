@@ -258,6 +258,10 @@ class PhaseVocoder(Engine):
             return
         return createBPF(trans, config, time_points, num_points, eq_freqs)
 
+    @staticmethod
+    def create_BPF_time_vec(duration, local_pars, timeVec=None):
+        return createBPFtimeVec(duration, local_pars, timeVec)
+
 
 def processWithSTFT(waveIn, config, BPF):
 
