@@ -9,6 +9,8 @@ numFiles = 10
 # apply transformation in series (True) or parallel (False)
 chain = true
 
+sr = 44100
+
 transf = ["eq"]
 
 # generate experiment folder with name based on current time
