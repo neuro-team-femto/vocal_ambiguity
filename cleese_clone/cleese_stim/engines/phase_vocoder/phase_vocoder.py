@@ -252,15 +252,19 @@ class PhaseVocoder(Engine):
         wav.write(fileName, sr, waveOutFormat)
 
     @staticmethod
-    def create_BPF(trans, config_file, time_points, num_points, eq_freqs=None):
+    def create_BPF(trans, config_file, time_points, num_points, endOnTrans, eq_freqs=None):
         config = load_config(config_file)
         if config is None:
             return
-        return createBPF(trans, config, time_points, num_points, eq_freqs)
+        return createBPF(trans, config, time_points, num_points, endOnTrans, eq_freqs)
 
     @staticmethod
     def create_BPF_time_vec(duration, local_pars, timeVec=None):
         return createBPFtimeVec(duration, local_pars, timeVec)
+
+    @staticmethod
+    def createBPFfreqs(config):
+        return createBPFfreqs(config)
 
 
 def processWithSTFT(waveIn, config, BPF):
