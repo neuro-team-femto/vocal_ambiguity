@@ -24,8 +24,7 @@ oversampling = 8
 
 [stretch]
 window.len = 0.1
-window.count = 5
-window.unit = 'n'
+window.unit = 's'
 # stretching factor. >1: expansion, <1: compression
 std = 1.5
 trunc = 1

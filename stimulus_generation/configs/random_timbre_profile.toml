@@ -26,8 +26,7 @@ oversampling = 8
 
 [eq]
 window.len = 0.1
-window.count = 5
-window.unit = 'n'
+window.unit = 's'
 std = 5
 trunc = 1
 BPFtype = 'ramp'
