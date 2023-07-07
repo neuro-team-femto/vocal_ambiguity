@@ -10,8 +10,34 @@ import json
 
 import os
 
-import argparse
+#### DEFINE THE FOLLOWIN PARAMS AS PER USE CASE ####
+#The timepoints for each of the words of intrest for each phrase
+time_points = {
+  "sat" : [2.50, 2.60],
+  "set" : [2.84, 2.94],
+  "beat" : [3.51, 3.62],
+  "bit" : [2.83, 2.93],
+  "fou" : [0.62, 0.79],
+  "fut" : [0.62, 0.84],
+  "brillant" : [3.65, 3.81],
+  "bruyant" : [3.68, 3.89]
+}
 
+parent_dir = "C:\\Users\\ptut0\\Documents\\vocal_ambiguity\\stimulus_generation"
+
+input_file = "./sounds/110_flat_groupe_bruyant.wav"
+
+config_dict = {
+  'stretch': "./configs/random_stretch_profile.toml",
+  'pitch': "./configs/random_pitch_profile.toml",
+  'eq': "./configs/random_timbre_profile.toml"
+}
+
+transforms = ['eq', 'stretch', 'pitch']
+
+num_files = 600
+
+#######################################################
 
 def generate_file(input_file, transforms, config_dict, output_file, audio_path, bpf_path, time_points=None):
   '''
@@ -125,33 +151,6 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
     json.dump(bpf_dict, f)
 
 
-## Make these args
-parent_dir = "C:\\Users\\ptut0\\Documents\\vocal_ambiguity\\stimulus_generation"
-
-input_file = "./sounds/110_flat_groupe_bruyant.wav"
-
-config_dict = {
-  'stretch': "./configs/random_stretch_profile.toml",
-  'pitch': "./configs/random_pitch_profile.toml",
-  'eq': "./configs/random_timbre_profile.toml"
-}
-
-transforms = ['eq', 'stretch', 'pitch']
-
-num_files = 600
-
-#The timepoints for each of the words of intrest for each phrase
-time_points = {
-  "sat" : [2.50, 2.60],
-  "set" : [2.84, 2.94],
-  "beat" : [3.51, 3.62],
-  "bit" : [2.83, 2.93],
-  "fou" : [0.62, 0.79],
-  "fut" : [0.62, 0.84],
-  "brillant" : [3.65, 3.81],
-  "bruyant" : [3.68, 3.89]
-}
-
 base_file = os.path.splitext(os.path.basename(input_file))[0]
 file_path = os.path.join(parent_dir, base_file)
 audio_path = os.path.join(parent_dir, base_file, 'audio\\') 
@@ -160,8 +159,6 @@ if not os.path.exists(file_path):
   os.mkdir(file_path)
   os.mkdir(audio_path)
   os.mkdir(bpf_path)
-
-
 
 for i in range(num_files):
   output_file  = base_file + f'_{i+1}'
