@@ -25,6 +25,6 @@ oversampling = 8
 [pitch]
 window.len = 0.1
 window.unit = 's'
-std = 150
+std = 100
 trunc = 1
 BPFtype = 'ramp'

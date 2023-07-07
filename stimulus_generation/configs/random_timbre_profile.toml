@@ -4,10 +4,10 @@
 outPath = "output"
 
 # number of output files to generate (for random modifications)
-numFiles = 10
+numFiles = 1
 
 # apply transformation in series (True) or parallel (False)
-chain = true
+chain = false
 
 sr = 44100
 
@@ -26,12 +26,13 @@ oversampling = 8
 
 [eq]
 window.len = 0.1
-window.unit = 's'
-std = 5
-trunc = 1
+window.count = 1
+window.unit = 'n'
+std = 15
+trunc = 2
 BPFtype = 'ramp'
 # mel, linear
 scale = 'mel'
-band.count = 10
+band.count = 25
 min_freq = 0
-max_freq = nan
+max_freq = 10000

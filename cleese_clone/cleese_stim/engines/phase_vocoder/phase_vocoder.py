@@ -311,7 +311,7 @@ def processWithSTFT(waveIn, config, BPF):
         frameVec = timeVec*sr/synHop
         for i in range(0, n_fft//2+1):
             filterMat[i, :] = np.interp(np.arange(0, numFrames),
-                                        frameVec, interpBPF[i, :])
+                                        frameVec, interpBPF[i, :])       
 
     stftMat *= np.power(10,filterMat/20)
 

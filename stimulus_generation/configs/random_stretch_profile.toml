@@ -26,6 +26,6 @@ oversampling = 8
 window.len = 0.1
 window.unit = 's'
 # stretching factor. >1: expansion, <1: compression
-std = 1.5
+std = 1
 trunc = 1
 BPFtype = 'ramp'
