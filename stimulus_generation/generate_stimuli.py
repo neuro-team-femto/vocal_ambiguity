@@ -73,11 +73,21 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
     if transform == 'eq':
       eqFreqVec = PhaseVocoder.createBPFfreqs(config)
 
-      if time_points_word == None:
+      if time_points_word.any() == None:
         print("No timepoints provided the eq transformation will apply to the entire file ")
       else:
         # timpoints for eq, only the word of interest
         bpf_time = [0, time_points_word[0], time_points_word[0], time_points_word[1], time_points_word[1], duration]
+
+        # create a bpf for each of the transformations
+        bpf_list = (PhaseVocoder.create_BPF(
+          transform,
+          config_file,
+          bpf_time,
+          6,
+          0,
+          eqFreqVec
+        ))
 
         bpf_list[0, 3:] = np.zeros(len(bpf_list[0, 3:]))
         bpf_list[1, 3:] = np.zeros(len(bpf_list[1, 3:]))
@@ -109,7 +119,7 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
 
   # run the transformations
   if 'eq' in transforms:
-    bpf_list = generateCustomBP('eq', duration, time_points_word, eq_config, config_dict['eq'])
+    bpf_list = generateCustomBP('eq', duration, eq_config, config_dict['eq'], time_points_word)
     wave_out,bpf_out = cleese.process_data(
         PhaseVocoder,
         wave_in,
@@ -121,7 +131,7 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
     bpf_dict['eq'] = str(bpf_out)
 
   if 'pitch' in transforms:
-    bpf_list = generateCustomBP('pitch', duration, time_points_word, pitch_config, config_dict['pitch'])
+    bpf_list = generateCustomBP('pitch', duration, pitch_config, config_dict['pitch'], time_points_word)
     wave_out,bpf_out = cleese.process_data(
         PhaseVocoder,
         wave_in,
@@ -133,7 +143,7 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
     bpf_dict['pitch'] = str(bpf_out)
 
   if 'stretch' in transforms:
-    bpf_list = generateCustomBP('stretch', duration, time_points_word, stretch_config, config_dict['stretch'])
+    bpf_list = generateCustomBP('stretch', duration, stretch_config, config_dict['stretch'], time_points_word)
     wave_out,bpf_out = cleese.process_data(
         PhaseVocoder,
         wave_in,
@@ -151,15 +161,16 @@ def generate_file(input_file, transforms, config_dict, output_file, audio_path, 
     json.dump(bpf_dict, f)
 
 
-base_file = os.path.splitext(os.path.basename(input_file))[0]
-file_path = os.path.join(parent_dir, base_file)
-audio_path = os.path.join(parent_dir, base_file, 'audio\\') 
-bpf_path = os.path.join(parent_dir, base_file, 'bpf\\')
-if not os.path.exists(file_path):
-  os.mkdir(file_path)
-  os.mkdir(audio_path)
-  os.mkdir(bpf_path)
-
-for i in range(num_files):
-  output_file  = base_file + f'_{i+1}'
-  generate_file(input_file, transforms, time_points, config_dict, output_file, audio_path, bpf_path)
+if __name__ == "__main__":
+  base_file = os.path.splitext(os.path.basename(input_file))[0]
+  file_path = os.path.join(parent_dir, base_file)
+  audio_path = os.path.join(parent_dir, base_file, 'audio\\') 
+  bpf_path = os.path.join(parent_dir, base_file, 'bpf\\')
+  if not os.path.exists(file_path):
+    os.mkdir(file_path)
+    os.mkdir(audio_path)
+    os.mkdir(bpf_path)
+  
+  for i in range(num_files):
+    output_file  = base_file + f'_{i+1}'
+    generate_file(input_file, transforms, config_dict, output_file, audio_path, bpf_path,  time_points)
