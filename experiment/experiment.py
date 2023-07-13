@@ -93,7 +93,7 @@ def generate_result_file(subject_number, condition):
     result_file = 'results/results_subj'+str(subject_number)+'_'+condition+'_'+date.strftime('%y%m%d_%H.%M')+'.csv'        
     result_headers = ['subj','sex','age', 'english', 'french', 'date',
                       'condition', 'practice','block','trial',
-                      'stim','stim_order', 'eq','pitch','stretch','response','rt', 'confidence', 'confidence_rt']
+                      'stim', 'stim_num', 'stim_order', 'eq','pitch','stretch','response','rt', 'confidence', 'confidence_rt']
     with open(result_file, 'w+', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(result_headers)
@@ -178,13 +178,6 @@ def update_confidence_trial_gui():
     confidence_scale.draw()
     win.flip()
 
-
-
-def get_false_feedback(min,max):
-# git eturns a random percentage (int) between min and max percent
-# min, max: integers between 0 and 100
-    return int(100*random.uniform(float(min)/100, float(max)/100))
-
 def play_sound(sound):
         #play sound
         audio = pyaudio.PyAudio()
@@ -208,41 +201,11 @@ def play_sound(sound):
 ###########################################################################################
 # Experiment parameters
 
-FRENCH_1_PARAMS = { 'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
+FREN_1_PARAMS = { 'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Quelle prononciation sonne le plus comme bruyant ?',
                                  '2' : u'Quelle prononciation sonne le plus comme brillant ?',
-                                 '3' : u'Quelle prononciation sonne le plus comme bit ?',
-                                 '4' : u'Quelle prononciation sonne le plus comme beat ?'},
-                   'instruction_texts': ['text/intro_french.txt'],
-                   'practice_start_text': 'text/practice_french.txt',
-                   'practice_end_text': 'text/end_practice_french.txt',
-                   'pause_start_text': 'text/pause1_french.txt',
-                   'pause_end_text': 'text/pause0_french.txt',
-                   'end_text': 'text/end_french.txt',
-                   'give_sound_model' : False}
-
-FRENCH_2_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
-                   'isi': .5, 'pause_duration': 5,
-                   'questions': { '1' : u'Quelle prononciation sonne le plus comme bruyant ?',
-                                 '2' : u'Quelle prononciation sonne le plus comme brillant ?',
-                                 '3' : u'Quelle prononciation sonne le plus comme bit ?',
-                                 '4' : u'Quelle prononciation sonne le plus comme beat ?'},
-                   'instruction_texts': ['text/intro_french.txt'],
-                   'practice_start_text': 'text/practice_french.txt',
-                   'practice_end_text': 'text/end_practice_french.txt',
-                   'pause_start_text': 'text/pause1_french.txt',
-                   'pause_end_text': 'text/pause0_french.txt',
-                   'end_text': 'text/end_french.txt',
-                   'give_sound_model' : False}
-
-FRENCH_3_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
-                   'isi': .5, 'pause_duration': 5,
-                   'questions': { '1' : u'Quelle prononciation sonne le plus comme fou ?',
-                                 '2' : u'Quelle prononciation sonne le plus comme fût ?',
                                  '3' : u'Quelle prononciation sonne le plus comme set ?',
                                  '4' : u'Quelle prononciation sonne le plus comme sat ?'},
                    'instruction_texts': ['text/intro_french.txt'],
@@ -253,14 +216,13 @@ FRENCH_3_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False
                    'end_text': 'text/end_french.txt',
                    'give_sound_model' : False}
 
-
-FRENCH_4_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
+FREN_2_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Quelle prononciation sonne le plus comme fou ?',
                                  '2' : u'Quelle prononciation sonne le plus comme fût ?',
-                                 '3' : u'Quelle prononciation sonne le plus comme set ?',
-                                 '4' : u'Quelle prononciation sonne le plus comme sat ?'},
+                                 '3' : u'Quelle prononciation sonne le plus comme bit ?',
+                                 '4' : u'Quelle prononciation sonne le plus comme beat ?'},
                    'instruction_texts': ['text/intro_french.txt'],
                    'practice_start_text': 'text/practice_french.txt',
                    'practice_end_text': 'text/end_practice_french.txt',
@@ -269,41 +231,28 @@ FRENCH_4_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False
                    'end_text': 'text/end_french.txt',
                    'give_sound_model' : False}
 
-ENG_1_PARAMS = { 'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
-                   'isi': .5, 'pause_duration': 5,
-                   'questions': { '1' : u'Which pronounciation sounds most like bruyant ?',
-                                 '2' : u'Which pronounciation sounds most like brillant ?',
-                                 '3' : u'Which pronounciation sounds most like bit ?',
-                                 '4' : u'Which pronounciation sounds most like beat ?'},
-                   'instruction_texts': ['text/intro_eng.txt'],
-                   'practice_start_text': 'text/practice_eng.txt',
-                   'practice_end_text': 'text/end_practice_eng.txt',
-                   'pause_start_text': 'text/pause1_eng.txt',
-                   'pause_end_text': 'text/pause0_eng.txt',
-                   'end_text': 'text/end_eng.txt',
-                   'give_sound_model' : False}
 
-ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
-                   'isi': .5, 'pause_duration': 5,
-                   'questions': { '1' : u'Which pronounciation sounds most like bruyant ?',
-                                 '2' : u'Which pronounciation sounds most like brillant ?',
-                                 '3' : u'Which pronounciation sounds most like bit ?',
-                                 '4' : u'Which pronounciation sounds most like beat ?'},
-                   'instruction_texts': ['text/intro_eng.txt'],
-                   'practice_start_text': 'text/practice_eng.txt',
-                   'practice_end_text': 'text/end_practice_eng.txt',
-                   'pause_start_text': 'text/pause1_eng.txt',
-                   'pause_end_text': 'text/pause0_eng.txt',
-                   'end_text': 'text/end_eng.txt',
-                   'give_sound_model' : False}
 
-ENG_3_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
+ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Which pronounciation sounds most like fou ?',
                                  '2' : u'Which pronounciation sounds most like fût ?',
+                                 '3' : u'Which pronounciation sounds most like bit ?',
+                                 '4' : u'Which pronounciation sounds most like beat ?'},
+                   'instruction_texts': ['text/intro_eng.txt'],
+                   'practice_start_text': 'text/practice_eng.txt',
+                   'practice_end_text': 'text/end_practice_eng.txt',
+                   'pause_start_text': 'text/pause1_eng.txt',
+                   'pause_end_text': 'text/pause0_eng.txt',
+                   'end_text': 'text/end_eng.txt',
+                   'give_sound_model' : False}
+
+ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 1,
+                   'isi': .5, 'pause_duration': 5,
+                   'questions': { '1' : u'Which pronounciation sounds most like bruyant ?',
+                                 '2' : u'Which pronounciation sounds most like brillant ?',
                                  '3' : u'Which pronounciation sounds most like set ?',
                                  '4' : u'Which pronounciation sounds most like sat ?'},
                    'instruction_texts': ['text/intro_eng.txt'],
@@ -315,25 +264,7 @@ ENG_3_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
                    'give_sound_model' : False}
 
 
-ENG_4_PARAMS = {'n_blocks':4, 'n_stims': 1, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
-                   'isi': .5, 'pause_duration': 5,
-                   'questions': { '1' : u'Which pronounciation sounds most like fou ?',
-                                 '2' : u'Which pronounciation sounds most like fût ?',
-                                 '3' : u'Which pronounciation sounds most like set ?',
-                                 '4' : u'Which pronounciation sounds most like sat ?'},
-                   'instruction_texts': ['text/intro_eng.txt'],
-                   'practice_start_text': 'text/practice_eng.txt',
-                   'practice_end_text': 'text/end_practice_eng.txt',
-                   'pause_start_text': 'text/pause1_eng.txt',
-                   'pause_end_text': 'text/pause0_eng.txt',
-                   'end_text': 'text/end_eng.txt',
-                   'give_sound_model' : False}
-
-CONDITION_PARAMS = {'exp_1': [FRENCH_1_PARAMS, ENG_1_PARAMS], 'exp_2' : [FRENCH_2_PARAMS, ENG_2_PARAMS],
-                    'exp_3': [FRENCH_3_PARAMS, ENG_3_PARAMS], 'exp_4': [FRENCH_4_PARAMS, ENG_4_PARAMS], 
-                    'exp_5': [FRENCH_1_PARAMS, ENG_1_PARAMS], 'exp_6' : [FRENCH_2_PARAMS, ENG_2_PARAMS],
-                    'exp_7': [FRENCH_3_PARAMS, ENG_3_PARAMS], 'exp_8': [FRENCH_4_PARAMS, ENG_4_PARAMS],}
+CONDITION_PARAMS = {'exp_1': [FREN_1_PARAMS, ENG_1_PARAMS], 'exp_2' : [FREN_2_PARAMS, ENG_2_PARAMS]}
 
 
 
