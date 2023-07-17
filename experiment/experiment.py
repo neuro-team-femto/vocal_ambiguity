@@ -7,8 +7,8 @@ import csv
 import datetime
 import random
 from psychopy import prefs
-prefs.general['audioLib'] = ['pygame', 'sounddevice', 'ptb', 'pyo']
-from psychopy import sound,visual,event,core,gui
+prefs.general['audioLib'] = ['pyo']
+from psychopy import visual,event,core,gui
 from fractions import Fraction
 import pyaudio
 import wave
@@ -144,9 +144,7 @@ def show_text_with_sounds_(file_name, play_keys, sounds):
         for play_key, sound in zip(play_keys, sounds): 
             if response_key == [play_key]:
                 event.clearEvents()
-                audio = sound.Sound(sound)
-                audio.play()
-                #play_sound(sound)
+                play_sound(sound)
                 break
         else:      
             event.clearEvents()
