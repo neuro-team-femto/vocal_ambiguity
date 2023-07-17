@@ -429,11 +429,11 @@ for block_count, trial_file in enumerate(trial_files):
                 if (block_count == 0 or block_count == 1):
                   response_instruction_1.setColor('red')
                 if block_count == 2:
-                  response_instruction_2.setColor('red')
+                  response_instruction_2.setColor('blue')
                 if block_count == 3:
                   response_instruction_3.setColor('red')
                 if block_count == 4:
-                  response_instruction_4.setColor('red')
+                  response_instruction_4.setColor('blue')
                 update_sound_trial_gui(block_count)
                 
                 # upon key response...
