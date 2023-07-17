@@ -1,7 +1,6 @@
-Pour cette expérience, vous allez entendre 2 phrases en francais ou en anglais, prononcées avec différentes intonations qui jouent sur la hauteur et la vitesse. 
+Pour cette expérience, vous allez entendre des phrases en francais ou en anglais, prononcées avec différentes intonations qui jouent sur la hauteur et la vitesse. 
 
-Pour chaque paire, vous devrez indiquer avec le clavier laquelle des deux phrases contient le meilleur exemple du mot donné. 
-Si c'est la première phrase entendue qui vous semble le meilleur exemple, appuyez sur la touche [g]; si c’est la 2ème, appuyez sur la touche [h].
+Vous devrez indiquer avec le clavier lequel des deux mots indiqués apparaît dans la phrase en appayuant sur la touche [g] ou [h].
 
 Après chaque réponse, vous devrez également estimer à quel point vous êtes sûr de votre réponse, avec une échelle allant de 1 (pas du tout sûr) à 4 (tout à fait certain). 
 
