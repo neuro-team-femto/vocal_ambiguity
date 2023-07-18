@@ -289,7 +289,7 @@ elif condition == 'exp_2':
   response_options_1 = ['[g] fou','[h] fût']
   response_options_2 = ['[g] bit','[h] beat']
 response_keys = ['g', 'h']
-play_instruction_1 = visual.TextStim(win, units='norm', text="[Space] J'ai entendu ce group dans la rue, c'étais brillant/bruyant", color='red', height=label_size, pos=(0,0.5))
+play_instruction_1 = visual.TextStim(win, units='norm', text="[Space] J'ai entendu ce groupe dans la rue, c'était brillant/bruyant", color='red', height=label_size, pos=(0,0.5))
 play_instruction_2 = visual.TextStim(win, units='norm', text="[Space] Le fou/fût a roulé jusque dans la cave", color='red', height=label_size, pos=(0,0.5))
 play_instruction_3 = visual.TextStim(win, units='norm', text="[Space] Yesterday my son was playing a game with his friend and he bit/beat him", color='red', height=label_size, pos=(0,0.5))
 play_instruction_4 = visual.TextStim(win, units='norm', text="[Space] I'd been carrying my son around for hours and I finally set/sat him down", color='red', height=label_size, pos=(0,0.5))
