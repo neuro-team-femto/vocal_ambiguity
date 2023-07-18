@@ -294,7 +294,7 @@ date = datetime.datetime.now()
 time = core.Clock()
 
 # define GUI elements
-win = visual.Window([1366,768],fullscr=False,color="lightgray", units='norm')
+win = visual.Window([1366,768],fullscr=False,color="lightgray", units='norm', screen = 1)
 screen_ratio = (float(win.size[1])/float(win.size[0]))
 label_size = 0.1
 
