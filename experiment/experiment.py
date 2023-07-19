@@ -199,8 +199,8 @@ def play_sound(sound):
 ###########################################################################################
 # Experiment parameters
 
-FREN_1_PARAMS = { 'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+FREN_1_PARAMS = { 'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Quelle prononciation sonne le plus comme bruyant ?',
                                  '2' : u'Quelle prononciation sonne le plus comme brillant ?',
@@ -214,8 +214,8 @@ FREN_1_PARAMS = { 'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'end_text': 'text/end_french.txt',
                    'give_sound_model' : False}
 
-FREN_2_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+FREN_2_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Quelle prononciation sonne le plus comme fou ?',
                                  '2' : u'Quelle prononciation sonne le plus comme fût ?',
@@ -231,8 +231,8 @@ FREN_2_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
 
 
 
-ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Which pronounciation sounds most like fou ?',
                                  '2' : u'Which pronounciation sounds most like fût ?',
@@ -246,8 +246,8 @@ ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'end_text': 'text/end_eng.txt',
                    'give_sound_model' : False}
 
-ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Which pronounciation sounds most like bruyant ?',
                                  '2' : u'Which pronounciation sounds most like brillant ?',

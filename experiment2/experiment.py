@@ -206,8 +206,8 @@ def play_sound(sound):
 ###########################################################################################
 # Experiment parameters
 
-FREN_PARAMS = { 'n_blocks':2, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+FREN_PARAMS = { 'n_blocks':2, 'n_stims': 100, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'question': u'Quel mot avez-vous entendu ?',
                    'instruction_texts': ['text/intro_french.txt'],
@@ -218,8 +218,8 @@ FREN_PARAMS = { 'n_blocks':2, 'n_stims': 3, 'repeat_for_internal_noise':False,
                    'end_text': 'text/end_french.txt',
                    'give_sound_model' : False}
 
-ENG_PARAMS = { 'n_blocks':2, 'n_stims': 3, 'repeat_for_internal_noise':False,
-                   'practice':True, 'n_practice_trials': 1,
+ENG_PARAMS = { 'n_blocks':2, 'n_stims': 100, 'repeat_for_internal_noise':False,
+                   'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'question': u'What word did you hear?',
                    'instruction_texts': ['text/intro_eng.txt'],
