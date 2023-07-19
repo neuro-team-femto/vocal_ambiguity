@@ -231,7 +231,7 @@ FREN_2_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
 
 
 
-ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Which pronounciation sounds most like fou ?',
@@ -246,7 +246,7 @@ ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
                    'end_text': 'text/end_eng.txt',
                    'give_sound_model' : False}
 
-ENG_2_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
+ENG_1_PARAMS = {'n_blocks':4, 'n_stims': 50, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 3,
                    'isi': .5, 'pause_duration': 5,
                    'questions': { '1' : u'Which pronounciation sounds most like bruyant ?',
