@@ -1,7 +1,0 @@
-For this experiment, you will hear a phrase in French or English, pronounced with different intonations modifying the pitch and speed. 
-
-You must use the keyboard to indicate which of the two indicated words you hear in the phrase by pressing either [g] or [h].
-
-After each response, you will also be asked to estimate your certainty in your choice on a scale from 1 (not at all certain) to 4 (completely certain).
-
-(Please press any button to continue)
