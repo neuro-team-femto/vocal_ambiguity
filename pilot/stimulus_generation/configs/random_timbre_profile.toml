@@ -1,0 +1,38 @@
+[main]
+
+# output root folder
+outPath = "output"
+
+# number of output files to generate (for random modifications)
+numFiles = 1
+
+# apply transformation in series (True) or parallel (False)
+chain = false
+
+sr = 44100
+
+transf = ["eq"]
+
+# generate experiment folder with name based on current time
+generateExpFolder = true
+
+[analysis]
+
+# analysis window length in seconds
+# (not to be confused with the BPF processing window lengths)
+window.len = 0.04
+# number of hops per analysis window
+oversampling = 8
+
+[eq]
+window.len = 0.1
+window.count = 1
+window.unit = 'n'
+std = 15
+trunc = 2
+BPFtype = 'ramp'
+# mel, linear
+scale = 'mel'
+band.count = 25
+min_freq = 0
+max_freq = 10000
