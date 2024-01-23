@@ -32,15 +32,18 @@ print(
 import parselmouth
 from parselmouth.praat import call
 
-MAX_FORMANT  = 4000
+MMAX_FORMANT  = 4000
 MAX_NUM_FORMANTS = 4
 WINDOW_LENGTH = 0.04
 STEP_SIZE = 10
-LANGUAGE = 'french'
-SOUND1 = {'pull': './sounds/tts/pull_flat.wav'}
-SOUND2 = {'poule': './sounds/tts/poule_flat.wav'}
-KEYS = {'poule': [' P','oule','.'], 'pull' : [' P','ule','.']}
-RESULT_FILE_NAME = "french_results"
+LANGUAGE = 'english'
+SOUND1 = {'peel': './sounds/tts/peel_flat.wav'}
+SOUND2 = {'pill': './sounds/tts/pill_flat.wav'}
+KEYS = {'pill': ['pill'], 'peel' : ['peel']}
+RESULT_FILE_NAME = "english_results"
+ASR_LENGTH = 1
+TIMEPOINTS1 = [0.0, 0.099992, 0.198462, 0.425]
+TIMEPOINTS2 = [0.0, 0.096190, 0.197479, 0.393]
 
 def resynthesize(sound, formant_object):
   """rebuild a sound from the source and formants
@@ -86,11 +89,17 @@ def get_formants(formant_object):
   f3 = call(formant_object, 'Get mean', 3, 0, 0, 'Hertz')
   f4 = call(formant_object, 'Get mean', 4, 0, 0, 'Hertz')
 
+  #print(f'f1: {f1}')
+  #print(f'f2: {f2}')
+  #print(f'f3: {f3}')
+  #print(f'f4: {f4}')
+  #print("")
+
   formants = [f1,f2,f3,f4]
 
   return formants
 
-def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth: str):
+def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth: str, length : int):
   """Get the log probability of specified words from Whisper for a single word audio input
 
   Parameters
@@ -125,7 +134,7 @@ def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth:
     language=language,
     without_timestamps=True,
     keys = keys,
-    sample_len = 3,
+    sample_len = length,
     ground_truth = ground_truth
   )
   result = whisper.decode(model, mel, options)
@@ -139,11 +148,16 @@ def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth:
 
 def modify_formant(
   sound,
+  p,
+  l,
+  start: float,
+  end: float,
   formant_object,
   formant: dict[float],
   language: str,
   ground_truth: str,
   keys: dict[list[str]],
+  asr_length: int,
   current_minimum: dict[float],
   log_prob_grid: dict[str, list]
 ):
@@ -152,7 +166,19 @@ def modify_formant(
   Parameters
   ----------
   sound : praat sound object
-    The origin audio
+    The origin audio vowel
+  
+  p : praat sound object
+    p sound
+
+  l : praat sound object
+    l sound
+
+  start : float
+    start of vowel timepoint
+
+  end : float
+    end of vowel timepoint
 
   formant_object : praat formant object
     the input formants
@@ -166,13 +192,29 @@ def modify_formant(
   ground_truth : str
     the original word in the input audio
 
+  keys : dict[list[str]]
+    the syllables to be tokenized for asr
+
+  asr_length : int
+    the number of tokens for ask
+
   current_minimum : dict[float]
     current minimum log prob difference file name and value of the difference
 
+  log_prob_grid : dict[str,list]
+    dictionary to track the differences in log probs for all trials
+
+
   Returns
   -------
+  formant_object : praat formant object
+    updated praat formant object
+
   current_minimum : dict[float]
     the current minimum log prob difference that may have been updated
+
+  log_prb_grid : dict[str,list]
+    updated dictonaries of resulting log probs
 
   """
 
@@ -192,25 +234,28 @@ def modify_formant(
   )
 
   #build and save audio file with new formants
-  resynthesize(sound, formant_object).save(audio_file,'WAV')
+  new_vowel = resynthesize(sound, formant_object)
+  call([p, new_vowel, l], 'Concatenate').save(audio_file,'WAV')
 
-  sound1 = parselmouth.Sound(audio_file)
-  resampled_sound1 = sound1.resample(new_frequency = 10000)
-  formant_object1 = resampled_sound1.to_formant_burg(
+  new_sound = parselmouth.Sound(audio_file)
+  resampled_sound = new_sound.resample(new_frequency = 10000)
+  vowel = call(resampled_sound, 'Extract part', start, end, "rectangular", 1, "no")
+  new_formant_object = vowel.to_formant_burg(
     maximum_formant = 4000,
     max_number_of_formants = 4,
     window_length = 0.04
   )
 
-  hold_formants = get_formants(formant_object1)
+  hold_formants = get_formants(new_formant_object)
 
   #check new file with ars
-  result = check_asr_prob(audio_file, keys, language, ground_truth)
+  result = check_asr_prob(audio_file, keys, language, ground_truth, asr_length)
   log_prob_diff = abs(list(result.values())[0] - list(result.values())[1])
 
   #update current minimum difference in log probs
   if log_prob_diff < list(current_minimum.values())[0]:
-    current_minimum = {audio_file : log_prob_diff}
+    if log_prob_diff > 0.0:
+      current_minimum = {audio_file : log_prob_diff}
 
   log_prob_grid[ground_truth]['f1'].append(hold_formants[0])
   log_prob_grid[ground_truth]['f2'].append(hold_formants[1])
@@ -222,11 +267,11 @@ def modify_formant(
 ###### check intial ARS prediction to get basline log prob differences ######
 #############################################################################
 
-result = check_asr_prob(list(SOUND1.values())[0], KEYS, LANGUAGE, list(SOUND1.keys())[0])
+result = check_asr_prob(list(SOUND1.values())[0], KEYS, LANGUAGE, list(SOUND1.keys())[0], ASR_LENGTH)
 log_prob_diff = abs(list(result.values())[0] - list(result.values())[1])
 
 current_minimum = {list(SOUND1.values())[0] : log_prob_diff}
-result = check_asr_prob(list(SOUND2.values())[0], KEYS, LANGUAGE, list(SOUND2.keys())[0])
+result = check_asr_prob(list(SOUND2.values())[0], KEYS, LANGUAGE, list(SOUND2.keys())[0], ASR_LENGTH)
 log_prob_diff = abs(list(result.values())[0] - list(result.values())[1])
 
 if log_prob_diff < list(current_minimum.values())[0]:
@@ -241,14 +286,23 @@ resampled_sound1 = sound1.resample(new_frequency = 10000)
 sound2 = parselmouth.Sound(list(SOUND2.values())[0])
 resampled_sound2 = sound2.resample(new_frequency = 10000)
 
+#extract and work with only vowel
+p1 = call(sound1, 'Extract part', TIMEPOINTS1[0], TIMEPOINTS1[1], "rectangular", 1, "no")
+vowel1 = call(sound1, 'Extract part', TIMEPOINTS1[1], TIMEPOINTS1[2], "rectangular", 1, "no")
+l1 = call(sound1, 'Extract part', TIMEPOINTS1[2], TIMEPOINTS1[3], "rectangular", 1, "no")
+
+p2 = call(sound2, 'Extract part', TIMEPOINTS2[0], TIMEPOINTS2[1], "rectangular", 1, "no")
+vowel2 = call(sound2, 'Extract part', TIMEPOINTS2[1], TIMEPOINTS2[2], "rectangular", 1, "no")
+l2 = call(sound2, 'Extract part', TIMEPOINTS2[2], TIMEPOINTS2[3], "rectangular", 1, "no")
+
 # max formant 4600 female, 4000 male 
-formant_object1 = resampled_sound1.to_formant_burg(
+formant_object1 = vowel1.to_formant_burg(
   maximum_formant = MAX_FORMANT,
   max_number_of_formants = MAX_NUM_FORMANTS,
   window_length = WINDOW_LENGTH
 )
 
-formant_object2 = resampled_sound2.to_formant_burg(
+formant_object2 = vowel2.to_formant_burg(
   maximum_formant = MAX_FORMANT,
   max_number_of_formants = MAX_NUM_FORMANTS,
   window_length = WINDOW_LENGTH
@@ -307,26 +361,36 @@ for i,formant1 in enumerate(f1_array):
       formants2['f2'] = formant2
 
     formant_object1, current_minimum, log_prob_grid = modify_formant(
-      resampled_sound1,
+      vowel1,
+      p1,
+      l1,
+      TIMEPOINTS1[1],
+      TIMEPOINTS1[2],
       formant_object1,
       formants1,
       LANGUAGE,
       list(SOUND1.keys())[0],
       KEYS,
+      ASR_LENGTH,
       current_minimum,
       log_prob_grid
     )
     formant_object2, current_minimum, log_prob_grid = modify_formant(
-      resampled_sound2,
+      vowel2,
+      p2,
+      l2,
+      TIMEPOINTS1[1],
+      TIMEPOINTS2[2],
       formant_object2,
       formants2,
       LANGUAGE,
       list(SOUND2.keys())[0],
       KEYS,
+      ASR_LENGTH,
       current_minimum,
       log_prob_grid
     )
 
 # Convert and write JSON object to file
 with open(f"{RESULT_FILE_NAME}.json", "w") as outfile:
-    json.dump(log_prob_grid, outfile)
+    json.dump(log_prob_grid, outfile)\
