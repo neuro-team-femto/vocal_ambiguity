@@ -60,7 +60,7 @@ def resynthesize(sound, formant_object):
   -------
   rebuilt_sound : praat sound object
     a resynthesized sound with the input formants and source of the input sound
-  
+
   """
   #extract source from origin sound
   lpc_object = call(sound, 'To LPC (burg)', 16, 0.04, 0.005, 50)
@@ -82,7 +82,7 @@ def get_formants(formant_object):
   -------
   formants : List[float]
     list of the means of the first 4 formants
-  
+
   """
   f1 = call(formant_object, 'Get mean', 1, 0, 0, 'Hertz')
   f2 = call(formant_object, 'Get mean', 2, 0, 0, 'Hertz')
@@ -120,14 +120,15 @@ def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth:
 
   key_results : Dict{[str:float]}
     a dictionary containing the provided key words and their resulting log probabilities
+
   """
   # load audio and pad/trim it to fit 30 seconds
   audio = whisper.load_audio(audiofile)
   audio = whisper.pad_or_trim(audio)
-  
+
   # make log-Mel spectrogram and move to the same device as the model
   mel = whisper.log_mel_spectrogram(audio).to(model.device)
-  
+
   # decode the audio
   # predict without timestamps for short-form transcription
   options = whisper.DecodingOptions(
@@ -138,7 +139,7 @@ def check_asr_prob(audiofile: str, keys: list[str], language: str, ground_truth:
     ground_truth = ground_truth
   )
   result = whisper.decode(model, mel, options)
-  
+
   #extract the key strings and resulting log probabilities
   key_results = {}
   for key in result.keylogprobs:
@@ -167,7 +168,7 @@ def modify_formant(
   ----------
   sound : praat sound object
     The origin audio vowel
-  
+
   p : praat sound object
     p sound
 
