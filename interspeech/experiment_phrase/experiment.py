@@ -100,7 +100,7 @@ def read_trials(trial_file):
 def generate_result_file(subject_number, condition):
 
     result_file = 'results/results_subj'+str(subject_number)+'_'+condition+'_'+date.strftime('%y%m%d_%H.%M')+'.csv'        
-    result_headers = ['subj','sex','age', 'language', 'english', 'french', 'date',
+    result_headers = ['subj','sex','age', 'language', 'english', 'french', 'native_lang', 'date',
                       'condition', 'practice','block','trial',
                       'stim','pitch','stretch','response','rt', 'confidence', 'confidence_rt']
     with open(result_file, 'w+', newline='', encoding='utf-8') as file:
@@ -234,21 +234,23 @@ CONDITION_PARAMS = [FREN_PARAMS, ENG_PARAMS]
 # Start experiment
 
 # get participant info
-subject_info = { u'Number':1, 
+subject_info = { u'Participant Number':1, 
                  u'Age':20,
                  u'Sex': u'f/m',
                  u'Language': u'french/english',
                  u'English Proficency (1 (No proficiency) - 5 (Fluent))':2,
                  u'French Proficency (1 (No proficiency) - 5 (Fluent))':2,
+                 u'Native Language' : u'french/english/other',
                  u'condition': u'exp_1/exp_2'}
 dlg = gui.DlgFromDict(subject_info, title=u'REVCOR')
 if dlg.OK:
-    subject_number = subject_info[u'Number']
+    subject_number = subject_info[u'Participant Number']
     subject_age = subject_info[u'Age']
     subject_sex = subject_info[u'Sex']
     subject_language  = subject_info[u'Language']
     subject_en = subject_info[u'English Proficency (1 (No proficiency) - 5 (Fluent))']
     subject_fr = subject_info[u'French Proficency (1 (No proficiency) - 5 (Fluent))']
+    subject_native_lang = subject_info[u'Native Language']
     condition = subject_info[u'condition']
 else:
     core.quit() #the user hit cancel so exit
@@ -454,7 +456,7 @@ for block_count, trial_file in enumerate(trial_files):
         with open(result_file, 'a',newline='', encoding='utf-8') as file :
             writer = csv.writer(file,lineterminator='\n')
             # common response data for all trials
-            row = [subject_number, subject_sex, subject_age, subject_language, subject_en, subject_fr, date, 
+            row = [subject_number, subject_sex, subject_age, subject_language, subject_en, subject_fr, subject_native_lang, date, 
                condition, practice_trial, block_count, trial_count]
 
             # trial-specific response data
