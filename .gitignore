@@ -164,6 +164,3 @@ cython_debug/
 
 pilot/experiment/sounds/
 pilot/experiment2/sounds/
-
-interspeech/sounds/tts/formant_tests/
-
