@@ -33,7 +33,7 @@ def enblock(x, n_stims):
         end = n_stims*(i+1)
         yield x[start:end]
     
-def generate_trial_files(subject_number, n_blocks=1,n_stims=100, practice=False):
+def generate_trial_files(subject_number, condition, n_blocks=1,n_stims=100, practice=False):
 # generates n_block trial files per subject
 # each block contains n_stim trials, randomized from folder which name is inferred from subject_number
 # returns an array of n_block file names
@@ -41,16 +41,18 @@ def generate_trial_files(subject_number, n_blocks=1,n_stims=100, practice=False)
     random.seed(seed)
 
     # test if subj folder exists
-    stim_folder = "../sounds/"
+    stim_folder = "sounds"
 
     folders_list = [x[0] for x in os.walk(stim_folder)]
-    sound_folders = []
     for folder in folders_list:
         if "audio" in folder:
-            sound_folders.append(folder)
+            if "english" in folder:
+              english_folder = folder
+            else:
+              french_folder = folder
 
-    first_word = [os.path.basename(x) for x in glob.glob(sound_folders[0]+"/*.wav")]
-    second_word = [os.path.basename(x) for x in glob.glob(sound_folders[1]+"/*.wav")]
+    english_word = [os.path.basename(x) for x in glob.glob(english_folder+"/*.wav")]
+    french_word = [os.path.basename(x) for x in glob.glob(french_folder+"/*.wav")]
 
     # trials consist of two random files, one from the first half, and one from the second half of the stimulus list
     # write trials by blocks of n_stims
@@ -58,23 +60,23 @@ def generate_trial_files(subject_number, n_blocks=1,n_stims=100, practice=False)
 
     for block in range(n_blocks):
         practice_tag = 'PRACTICE' if practice else ''
-        trial_file = 'trials/' + str(subject_number) + '_' + practice_tag + '_BLOCK_'+ str(block) + '_' + date.strftime('%y%m%d_%H.%M')+'.csv'
+        trial_file = 'trials/' + str(subject_number) + '_'+condition+ '_' + practice_tag + '_BLOCK_'+ str(block) + '_' + date.strftime('%y%m%d_%H.%M')+'.csv'
         
         trial_files.append(trial_file)
             # create a randomized ordering of the stimuli
         stim_list = []
+  
         for i in range(n_stims):
-          stim = random.randint(1, 2)
-          if stim == 1:
-            if (block == 0):
-              stim_list.append([f'{sound_folders[0]}/{random.choice(first_word)}'])
-            if (block == 1):
-              stim_list.append([f'{sound_folders[2]}/{random.choice(third_word)}'])
-          elif stim  == 2:
-            if (block == 0):
-              stim_list.append([f'{sound_folders[1]}/{random.choice(second_word)}'])
-            if (block == 1):
-              stim_list.append([f'{sound_folders[3]}/{random.choice(fourth_word)}'])
+            if (condition == 'exp_1'):
+              if (block == 0):
+                stim_list.append([f'{french_folder}/{random.choice(french_word)}'])
+              if (block == 1):
+                stim_list.append([f'{english_folder}/{random.choice(english_word)}'])
+            if (condition == 'exp_2'):
+              if (block == 0):
+                stim_list.append([f'{english_folder}/{random.choice(english_word)}'])
+              if (block == 1):
+                stim_list.append([f'{french_folder}/{random.choice(french_word)}'])
              
 
         with open(trial_file, 'w+', newline='', encoding='utf-8') as file :
@@ -95,12 +97,12 @@ def read_trials(trial_file):
         trials = list(reader)
     return trials #trim header
 
-def generate_result_file(subject_number):
+def generate_result_file(subject_number, condition):
 
-    result_file = 'results/results_subj'+str(subject_number)+'_'+date.strftime('%y%m%d_%H.%M')+'.csv'        
-    result_headers = ['subj','sex','age', 'english', 'french', 'date',
+    result_file = 'results/results_subj'+str(subject_number)+'_'+condition+'_'+date.strftime('%y%m%d_%H.%M')+'.csv'        
+    result_headers = ['subj','sex','age', 'language', 'english', 'french', 'date',
                       'condition', 'practice','block','trial',
-                      'stim','eq','pitch','stretch','response','rt', 'confidence', 'confidence_rt']
+                      'stim', 'pitch','stretch','response','rt', 'confidence', 'confidence_rt']
     with open(result_file, 'w+', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(result_headers)
@@ -200,7 +202,7 @@ def play_sound(sound):
 ###########################################################################################
 # Experiment parameters
 
-FREN_PARAMS = { 'n_blocks': 1, 'n_stims': 2, 'repeat_for_internal_noise':False,
+FREN_PARAMS = { 'n_blocks': 2, 'n_stims': 2, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'question': u'Quel mot avez-vous entendu ?',
@@ -212,7 +214,7 @@ FREN_PARAMS = { 'n_blocks': 1, 'n_stims': 2, 'repeat_for_internal_noise':False,
                    'end_text': 'text/end_french.txt',
                    'give_sound_model' : False}
 
-ENG_PARAMS = { 'n_blocks': 1, 'n_stims': 2, 'repeat_for_internal_noise':False,
+ENG_PARAMS = { 'n_blocks': 2, 'n_stims': 2, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'question': u'What word did you hear?',
@@ -237,7 +239,8 @@ subject_info = { u'Number':1,
                  u'Sex': u'f/m',
                  u'Language': u'french/english',
                  u'English Proficency (1 (No proficiency) - 5 (Fluent))':2,
-                 u'French Proficency (1 (No proficiency) - 5 (Fluent))':2,}
+                 u'French Proficency (1 (No proficiency) - 5 (Fluent))':2,
+                 u'condition': u'exp_1/exp_2'}
 dlg = gui.DlgFromDict(subject_info, title=u'REVCOR')
 if dlg.OK:
     subject_number = subject_info[u'Number']
@@ -246,6 +249,7 @@ if dlg.OK:
     subject_language  = subject_info[u'Language']
     subject_en = subject_info[u'English Proficency (1 (No proficiency) - 5 (Fluent))']
     subject_fr = subject_info[u'French Proficency (1 (No proficiency) - 5 (Fluent))']
+    condition = subject_info[u'condition']
 else:
     core.quit() #the user hit cancel so exit
 
@@ -274,11 +278,18 @@ else:
   sys.exit()
 
 # sound trial
-response_options_1 = ['[g] poule','[h] pull']
-response_options_2 = ['[g] pill','[h] peel']
+
 response_keys = ['g', 'h']
-play_instruction_1 = visual.TextStim(win, units='norm', text="[Space] Je l'ai entendu dire : poule/pull", color='red', height=label_size, pos=(0,0.5))
-play_instruction_2 = visual.TextStim(win, units='norm', text="[Space] I heard them say: pill/peel", color='blue', height=label_size, pos=(0,0.5))
+if condition == 'exp_1':
+  response_options_1 = ['[g] poule','[h] pull']
+  response_options_2 = ['[g] pill','[h] peel']
+  play_instruction_1 = visual.TextStim(win, units='norm', text="[Space] poule/pull", color='red', height=label_size, pos=(0,0.5))
+  play_instruction_2 = visual.TextStim(win, units='norm', text="[Space] pill/peel", color='blue', height=label_size, pos=(0,0.5))
+if condition == 'exp_2':
+  response_options_1 = ['[g] peel','[h] pill']
+  response_options_2 = ['[g] pull','[h] poule']
+  play_instruction_1 = visual.TextStim(win, units='norm', text="[Space] pill/peel", color='red', height=label_size, pos=(0,0.5))
+  play_instruction_2 = visual.TextStim(win, units='norm', text="[Space] poule/pull", color='blue', height=label_size, pos=(0,0.5))
 response_instruction = visual.TextStim(win, units='norm', text=params['question'], color='black', height=label_size, pos=(0,0.1), alignHoriz='center')
 play_icon = visual.ImageStim(win, image='images/play_off.png', units='norm', size = (0.15*screen_ratio,0.15), pos=(0,0.5+2*label_size))
 response_checkboxes = []
@@ -316,11 +327,11 @@ else:
 
 
 # generate data files
-result_file = generate_result_file(subject_number)
-trial_files = generate_trial_files(subject_number, n_blocks=params['n_blocks'],n_stims=params['n_stims'])
+result_file = generate_result_file(subject_number, condition)
+trial_files = generate_trial_files(subject_number, condition, n_blocks=params['n_blocks'],n_stims=params['n_stims'])
 # add practice block in first position
 if params['practice']: 
-    practice_file = generate_trial_files(subject_number, n_blocks=1, n_stims = params['n_practice_trials'], practice=True)[0]
+    practice_file = generate_trial_files(subject_number, condition, n_blocks=1, n_stims = params['n_practice_trials'], practice=True)[0]
     trial_files.insert(0, practice_file)
 ## duplicate last block (for internal noise computation)
 if params['repeat_for_internal_noise']:
@@ -444,7 +455,7 @@ for block_count, trial_file in enumerate(trial_files):
             writer = csv.writer(file,lineterminator='\n')
             # common response data for all trials
             row = [subject_number, subject_sex, subject_age, subject_language, subject_en, subject_fr, date, 
-               practice_trial, block_count, trial_count]
+               condition, practice_trial, block_count, trial_count]
 
             # trial-specific response data
             stim_params = get_stim_info(file_name=trial[0])
