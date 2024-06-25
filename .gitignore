@@ -1,11 +1,18 @@
-.ipynb_checkpoints
-/revcor_avc/clean_data.ipynb
-/revcor_avc/tidy_prolific.ipynb
-consent_form_vocal_ambiguity.docx
-/venv
-.venv
-pilot.z
+*.ipynb_checkpoints
+*/revcor_avc/clean_data.ipynb
+*/revcor_avc/tidy_prolific.ipynb
+*consent_form_vocal_ambiguity.docx
+*/venv
+*.venv
 
+*__pycache__/
+
+*.py[cod]
+*$py.class
+*.egg-info
+*.pytest_cache
+*.ipynb_checkpoints
+
+*thumbs.db
 *.DS_Store
-
-__pycache__/
+*.idea
