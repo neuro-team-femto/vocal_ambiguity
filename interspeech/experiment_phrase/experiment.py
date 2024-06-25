@@ -202,7 +202,7 @@ def play_sound(sound):
 ###########################################################################################
 # Experiment parameters
 
-FREN_PARAMS = { 'n_blocks': 2, 'n_stims': 2, 'repeat_for_internal_noise':False,
+FREN_PARAMS = { 'n_blocks': 2, 'n_stims': 250, 'repeat_for_internal_noise':False,
                    'practice':True, 'n_practice_trials': 1,
                    'isi': .5, 'pause_duration': 5,
                    'question': u'Quel mot avez-vous entendu ?',

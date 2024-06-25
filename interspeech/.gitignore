@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+/revcor_avc/clean_data.ipynb
+/revcor_avc/tidy_prolific.ipynb
+consent_form_vocal_ambiguity.docx
+/venv
+.venv
+pilot.zip
+
+*.DS_Store
+
+__pycache__/

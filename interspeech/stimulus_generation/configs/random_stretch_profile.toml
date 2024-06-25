@@ -17,7 +17,6 @@ generateExpFolder = true
 [analysis]
 
 # analysis window length in seconds
-# (not to be confused with the BPF processing window lengths)
 window.len = 0.04
 # number of hops per analysis window
 oversampling = 8

@@ -1,11 +1,13 @@
 # Generate pitch and stretch random changes every 100 ms
 # across a word or phrase
 import sys
+import tomli
+import json
+
 sys.path.insert(1, '/home/rosie/Documents/vocal_ambiguity/interspeech/stimulus_generation/cleese_clone')
 import cleese_stim as cleese
 from cleese_stim.engines import PhaseVocoder
-import tomli
-import json
+
 
 BASE_SOUND = "./sounds/tts/phrase_peel_pill_final.wav"
 LANGUAGE = 'english'
