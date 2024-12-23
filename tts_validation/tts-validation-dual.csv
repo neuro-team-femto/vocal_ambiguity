@@ -1,0 +1,37 @@
+filename,phrase,question,word,model,block
+base-1.wav,"The sign mentioned sin, but the person said scene.","The sign mentioned X, but the person said X.","sin, scene",base,two word
+clarity-1.wav,"The sign mentioned scene, but the person said sin.","The sign mentioned X, but the person said X.","scene, sin",clarity,two word
+base-2.wav,There was confusion between cup and cop in their speech.,There was confusion between X and X in their speech.,"cup, cop",base,two word
+clarity-2.wav,There was confusion between cop and cup in their speech.,There was confusion between X and X in their speech.,"cop, cup",clarity,two word
+base-3.wav,"He wrote down luke, but remembered it as look.","He wrote down X, but remembered it as X.","luke, look",base,two word
+clarity-3.wav,"He wrote down look, but remembered it as luke","He wrote down X, but remembered it as X","look, luke",clarity,two word
+base-4.wav,"The paper mentioned bit, yet he is telling me knot.","The paper mentioned X, yet he is telling me X.","bit, knot",base,two word
+clarity-4.wav,"The paper mentioned beat, yet he is telling me nut.","The paper mentioned X, yet he is telling me X.","beat, nut",clarity,two word
+base-5.wav,I am not sure if the word was could or if keyed was the right one,I am not sure if the word was X or if X was the right one,"could, keyed",base,two word
+clarity-5.wav,I am not sure if the word was cooed or if kid was the right one,I am not sure if the word was X or if X was the right one,"cooed, kid",clarity,two word
+base-6.wav,Now note down heat and the word hut on the bottom,Now note down X and the word X on the bottom,"heat, hut",base,two word
+clarity-6.wav,Now note down hit on the hat and the bottom,Now note down X and the word X on the bottom,"hit, hut",clarity,two word
+stretch-1.wav,"The sign mentioned could, but the person said cooed.","The sign mentioned X, but the person said X.","could, cooed",stretch,two word
+emphasis-1.wav,"The sign mentioned cooed, but the person said could.","The sign mentioned X, but the person said X.","cooed, could",emphasis,two word
+stretch-2.wav,There was confusion between kid and keyed in their speech.,There was confusion between X and X in their speech.,"kid, keyed",stretch,two word
+emphasis-2.wav,There was confusion between keyed and kid in their speech.,There was confusion between X and X in their speech.,"keyed, kid",emphasis,two word
+stretch-3.wav,"He wrote down hut, but remembered it as hat.","He wrote down X, but remembered it as X.","hut, hat",stretch,two word
+emphasis-3.wav,"He wrote down hat, but remembered it as hut","He wrote down X, but remembered it as X.","hat, hut",emphasis,two word
+stretch-4.wav,"The paper mentioned nut, yet he is telling me heat.","The paper mentioned X, yet he is telling me X.","nut, heat",stretch,two word
+emphasis-4.wav,"The paper mentioned knot, yet he is telling me hit.","The paper mentioned X, yet he is telling me X.","knot, hit",emphasis,two word
+stretch-5.wav,I am not sure if the word was scene or if cup was the right one,I am not sure if the word was X or if X was the right one,"scene, cup",stretch,two word
+emphasis-5.wav,I am not sure if the word was sin or if cop was the right one,I am not sure if the word was X or if X was the right one,"sin, cop",emphasis,two word
+stretch-6.wav,Now note down beat and the word look on the bottom,Now note down X and the word X on the bottom,"beat, look",stretch,two word
+emphasis-6.wav,Now note down bit and the word luke on the bottom,Now note down X and the word X on the bottom,"bit, luke",emphasis,two word
+base-7.wav,He whispered about hearing someone say pill and cup nearby.,He whispered about hearing someone say X and x nearby.,"pill, cup",base,two word
+clarity-7.wav,He whispered about hearing someone say peel and cop nearby.,He whispered about hearing someone say x and x nearby.,"peel, cop",clarity,two word
+base-8.wav,The presenter said dull but I think he meant but.,The presenter said X but I think he meant X.,"dull, but",base,two word
+clarity-8.wav,The presenter said doll but I think he meant bought.,The presenter said X but I think he meant x.,"doll, bought",clarity,two word
+base-9.wav,Please write down the words reap and rot on your paper.,Please write down the words X and X on your paper.,"reap, rot",base,two word
+clarity-9.wav,Please right down the words rip and rut on your paper.,Please right down the words X and X on your paper.,"rip, rut",clarity,two word
+stretch-7.wav,He whispered about hearing someone say but and rip nearby.,He whispered about hearing someone say X and X nearby.,"but, rip",stretch,two word
+emphasis-7.wav,He whispered about hearing someone say bought and reap nearby.,He whispered about hearing someone say X and X nearby.,"bought, reap",emphasis,two word
+stretch-8.wav,The presenter said peel but I think he meant rot.,The presenter said X but I think he meant X.,"peel, rot",stretch,two word
+emphasis-8.wav,The presenter said pill but I think he meant rut.,The presenter said X but I think he meant X.,"pill, rut",emphasis,two word
+stretch-9.wav,Please write down the words cup and dull on your paper.,Please write down the words X and X on your paper.,"cup, dull",stretch,two word
+emphasis-9.wav,Please right down the words cop and doll on your paper.,Please right down the words X and X on your paper.,"cop, doll",emphasis,two word

@@ -1,0 +1,365 @@
+Reference: Ship was what I heard, but maybe I misunderstood.
+Prediction:  Ship was what I heard, but maybe I misunderstood.
+
+1
+
+Reference: Sheep might have been what they meant, but it wasn’t clear.
+Prediction:  Sheep might have been what they meant, but it wasn't clear.
+
+1
+
+Reference: Pool was the word I caught, though it could’ve been something else.
+Prediction:  Fool was the word I caught, though it could have been something else.
+
+0
+
+Reference: Pull might have been what they were talking about, but I’m unsure
+Prediction:  Paul might have been what they were talking about, but I'm unsure.
+
+0
+
+Reference: Cut was the word used, but it seemed odd in context.
+Prediction:  Cut was the word used, but it seemed odd in context.
+
+1
+
+Reference: Cot could have been the intention, but I wasn’t sure.
+Prediction:  Cut could have been the intention, but I wasn't sure.
+
+0 (sub)
+
+Reference: I thought they said something about peel.
+Prediction:  I thought they said something about peel.
+
+1
+
+Reference: I think the phrase ended with full.
+Prediction:  I think the phrase ended with full.
+
+1
+
+Reference: The word on the sign was pill.
+Prediction:  the word on the sign was pill.
+
+1
+
+Reference: No, the text message definitely said fool.
+Prediction:  No, the text message definitely said FOOL!
+
+1
+
+Reference: I thought they ended their sentence with rut
+Prediction:  I thought they ended their sentence with rut.
+
+1
+
+Reference: It sounded like the last word they said was rot.
+Prediction:  It sounded like the last word they said was rot.
+
+1
+
+Reference: The word bean seemed important to the instructions.
+Prediction:  The word being seemed important to the instructions.
+
+0
+
+Reference: She kept mentioning bin during the conversation.
+Prediction:  She kept mentioning bin during the conversation.
+
+1
+
+Reference: The speaker mentioned wood, or at least something similar.
+Prediction:  the speaker mentioned wood, or at least something similar.
+
+1
+
+Reference: The word wooed was what she was trying to write
+Prediction:  The word wooed was what she was trying to write.
+
+1
+
+Reference: The phrase had dull somewhere in the middle of it.
+Prediction:  The phrase had delved somewhere in the middle of it.
+
+0
+
+Reference: I saw doll written on the note pad.
+Prediction:  I saw a doll written on the notepad.
+
+1
+
+Reference: doll was what I heard, but maybe I misunderstood.
+Prediction:  Dull was what I heard, but maybe I misunderstood.
+
+1
+
+Reference: dull might have been what they meant, but it wasn’t clear.
+Prediction:  Dull might have been what they meant, but it wasn't clear.
+
+1
+
+Reference: Wood was the word I caught, though it could’ve been something else.
+Prediction:  Wood was the word I caught, though it could have been something else.
+
+1
+
+Reference: Wooed might’ve been what they were talking about, but I’m unsure
+Prediction:  Wound might have been what they were talking about, but I'm unsure.
+
+0
+
+Reference: bean was the word used, but it seemed odd in context.
+Prediction:  Bean was the word used, but it seemed odd in context.
+
+1
+
+Reference: bin could’ve been the intention, but I wasn’t sure.
+Prediction:  Bin could have been the intention, but I wasn't sure.
+
+1
+
+Reference: I thought they said something about rot.
+Prediction:  I thought they said something about rot.
+
+1
+
+Reference: I think the phrase ended with rut.
+Prediction:  I think the phrase ended with rut.
+
+1
+
+Reference: The word on the sign was ship.
+Prediction:  the word on the sign was SHIP.
+
+1
+
+Reference: No, the text message definitely said sheep.
+Prediction:  No, the text message definitely said cheap.
+
+0
+
+Reference: I thought they ended their sentence with pool
+Prediction:  I thought they ended their sentence with pool.
+
+1
+
+Reference: It sounded like the last word they said was pull.
+Prediction:  It sounded like the last word they said was pull.
+
+1
+
+Reference: The word cut seemed important to the instructions.
+Prediction:  The word cut seemed important to the instructions.
+
+0
+
+Reference: She kept mentioning cot during the conversation.
+Prediction:  She kept mentioning Kot during the conversation.
+
+1
+
+Reference: The speaker mentioned peel, or at least something similar.
+Prediction:  the speaker mentioned peel, or at least something similar.
+
+1
+
+Reference: The word pill was what she was trying to write
+Prediction:  The word pill was what she was trying to write.
+
+1
+
+Reference: The phrase had fool somewhere in the middle of it.
+Prediction:  the phrase had fallen somewhere in the middle of it.
+
+0
+
+Reference: I saw full written on the note pad.
+Prediction:  I saw full written on the notepad.
+
+1
+
+Reference: The sign mentioned sin, but the person said scene.
+Prediction:  The sign mentioned sin, but the person said sin.
+
+1 0 (swap)
+
+Reference: The sign mentioned scene, but the person said sin.
+Prediction:  The sign mentioned sin, but the person said sin.
+
+0 1 (swap)
+
+Reference: There was confusion between cup and cop in their speech.
+Prediction:  there was confusion between cup and cop in their speech.
+
+1 1
+
+Reference: There was confusion between cop and cup in their speech.
+Prediction:  There was confusion between cop and cup in their speech.
+
+1 1
+
+Reference: He wrote down luke, but remembered it as look.
+Prediction:  He wrote down Luke but remembered it as a look.
+
+1 1
+
+Reference: He wrote down look, but remembered it as luke
+Prediction:  He wrote down, look, but remembered it as Luke.
+
+1 1
+
+Reference: The paper mentioned bit, yet he is telling me knot.
+Prediction:  The paper mentioned bit, yet he is telling me not.
+
+1 1
+
+Reference: The paper mentioned beat, yet he is telling me nut.
+Prediction:  The paper mentioned Beat, yet he is telling me not.
+
+1 0 (revserse)
+
+Reference: I am not sure if the word was could or if keyed was the right one
+Prediction:  I am not sure if the word was could or if keyed was the right one.
+
+1 1 
+
+Reference: I am not sure if the word was cooed or if kid was the right one
+Prediction:  I am not sure if the word was cooed or if kid was the right one.
+
+1 1
+
+Reference: Now note down heat and the word hut on the bottom
+Prediction:  Now note down heat, and the word hut on the bottom.
+
+1 1 
+
+Reference: Now note down hit on the hat and the bottom
+Prediction:  Now no down hit on the hat and the bottom.
+
+1 1
+
+Reference: The sign mentioned could, but the person said cooed.
+Prediction:  The sign mentioned could, but the person said queued.
+
+1 0 
+
+Reference: The sign mentioned cooed, but the person said could.
+Prediction:  The sign mentioned could, but the person said could.
+
+0 (swap) 1
+
+Reference: There was confusion between kid and keyed in their speech.
+Prediction:  There was confusion between Kidd and Key in their speech.
+
+1 0
+
+Reference: There was confusion between keyed and kid in their speech.
+Prediction:  there was confusion between Kid and Kid in their speech.
+
+0 (swap) 1
+
+Reference: He wrote down hut, but remembered it as hat.
+Prediction:  He wrote down hut, but remembered it as hat.
+
+1 1 
+
+Reference: He wrote down hat, but remembered it as hut
+Prediction:  He wrote Down Hat, but remembered it as Hut.
+
+1 1
+
+Reference: The paper mentioned nut, yet he is telling me heat.
+Prediction:  The paper mentioned Nut, yet he is telling me heat.
+
+1 1
+
+Reference: The paper mentioned knot, yet he is telling me hit.
+Prediction:  The paper mentioned not, yet he is telling me hit.
+
+1 1
+
+Reference: I am not sure if the word was scene or if cup was the right one
+Prediction:  I am not sure if the word was seen or if cup was the right one.
+
+1 1
+
+Reference: I am not sure if the word was sin or if cop was the right one
+Prediction:  I am not sure if the word was sin or if cop was the right one.
+
+1 1
+
+Reference: Now note down beat and the word look on the bottom
+Prediction:  Now note downbeat and the word look on the bottom.
+
+0 1
+
+Reference: Now note down bit and the word luke on the bottom
+Prediction:  Now no down bit, and the word Luke on the bottom.
+
+1 1
+
+Reference: He whispered about hearing someone say pill and cup nearby.
+Prediction:  He whispered about hearing someone say, pill and cup nearby.
+
+1 1
+
+Reference: He whispered about hearing someone say peel and cop nearby.
+Prediction:  he whispered about hearing someone say peel and cop nearby.
+
+1 1
+
+Reference: The presenter said dull but I think he meant but.
+Prediction:  The presenter said dull, but I think he meant butt.
+
+1 1
+
+Reference: The presenter said doll but I think he meant bought.
+Prediction:  The presenter said doll, but I think he meant bought.
+
+1 1
+
+Reference: Please write down the words reap and rot on your paper.
+Prediction:  please write down the words REEP and RUT on your paper.
+
+1 0 (swap)
+
+Reference: Please right down the words rip and rut on your paper.
+Prediction:  please write down the words RIP and RUT on your paper.
+
+1 1
+
+Reference: He whispered about hearing someone say but and rip nearby.
+Prediction:  He whispered about hearing someone say, but and rip nearby.
+
+1 1
+
+Reference: He whispered about hearing someone say bought and reap nearby.
+Prediction:  He whispered about hearing someone say, bought, and reap nearby.
+
+1 1
+
+Reference: The presenter said peel but I think he meant rot.
+Prediction:  The presenter said peel, but I think he meant rot.
+
+1 1
+
+Reference: The presenter said pill but I think he meant rut.
+Prediction:  The presenter said pill, but I think he meant rut.
+
+1 1
+
+Reference: Please write down the words cup and dull on your paper.
+Prediction:  please write down the words CUP and DULL on your paper.
+
+1 1
+
+Reference: Please right down the words cop and doll on your paper.
+Prediction:  Please write down the words CUP and DALL on your paper.
+
+0 (swap) 0
+
+20.4 WER
+
+only one revserse
+
+30% is the swap

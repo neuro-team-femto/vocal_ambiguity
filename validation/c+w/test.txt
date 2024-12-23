@@ -1,0 +1,4 @@
+{'Participant Private ID': [12059001, 12059001,12059001,12059001,12059001,12059135, 12059135, 12059135, 12059135, 12059135],
+ 'Question': ['Age', 'First Language', 'Most commonly used language day to day', 'Rank your English language proficiency', 'Sex', 'Age', 'First Language', 'Most commonly used language day to day', 'Rank your English language proficiency', 'Sex'],
+ 'Response': ['32','French', 'French', '3','Male','31', 'french','french','5','Female']
+}

@@ -1,0 +1,37 @@
+filename,phrase,question,word,model,block
+base-1.wav,"Ship was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",ship,base,single word
+clarity-1.wav,"Sheep might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",sheep,clarity,single word
+base-2.wav,"Pool was the word I caught, though it could have been something else.","X was the word I caught, though it could’ve been something else.",pool,base,single word
+clarity-2.wav,"Pull might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",pull,clarity,single word
+base-3.wav,"Cut was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",cut,base,single word
+clarity-3.wav,"Cot could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",cot,clarity,single word
+base-4.wav,I thought they said something about peel.,I thought they said something about X.,peel,base,single word
+base-5.wav,I think the phrase ended with full.,I think the phrase ended with X,full,base,single word
+clarity-4.wav,The word on the sign was pill.,The word on the sign was X,pill,clarity,single word
+clarity-5.wav,"No, the text message definitely said fool.","No, the text message definitely said X",fool,clarity,single word
+clarity-6.wav,I thought they ended their sentence with rut,I thought they ended their sentence with X,rut,clarity,single word
+base-6.wav,It sounded like the last word they said was rot.,It sounded like the last word they said was X,rot,base,single word
+clarity-7.wav,The word bean seemed important to the instructions.,The word X seemed important to the instructions.,bean,clarity,single word
+base-7.wav,She kept mentioning bin during the conversation.,She kept mentioning X during the conversation.,bin,base,single word
+clarity-8.wav,"The speaker mentioned wood, or at least something similar.","The speaker mentioned X, or at least something similar.",wood,clarity,single word
+base-8.wav,The word wooed was what she was trying to write,The word X was what she was trying to write,wooed,base,single word
+base-9.wav,The phrase had dull somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,dull,base,single word
+clarity-9.wav,I saw doll written on the notepad.,I saw X written on the note pad.,doll,clarity,single word
+stretch-1.wav,"doll was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",doll,stretch,single word
+emphasis-1.wav,"dull might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",dull,emphasis,single word
+stretch-2.wav,"Wood was the word I caught, though it could have been something else.","X was the word I caught, though it could’ve been something else.",wood,stretch,single word
+emphasis-2.wav,"Wooed might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",wooed,emphasis,single word
+stretch-3.wav,"bean was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",bean,stretch,single word
+emphasis-3.wav,"bin could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",bin,emphasis,single word
+emphasis-4.wav,I thought they said something about rot.,I thought they said something about X.,rot,emphasis,single word
+stretch-4.wav,I think the phrase ended with rut.,I think the phrase ended with X,rut,stretch,single word
+emphasis-5.wav,The word on the sign was ship.,The word on the sign was X,ship,emphasis,single word
+stretch-5.wav,"No, the text message definitely said sheep.","No, the text message definitely said X",sheep,stretch,single word
+emphasis-6.wav,I thought they ended their sentence with pool,I thought they ended their sentence with X,pool,emphasis,single word
+stretch-6.wav,It sounded like the last word they said was pull.,It sounded like the last word they said was X,pull,stretch,single word
+emphasis-7.wav,The word cut seemed important to the instructions.,The word X seemed important to the instructions.,cut,emphasis,single word
+stretch-7.wav,She kept mentioning cot during the conversation.,She kept mentioning X during the conversation.,cot,stretch,single word
+emphasis-8.wav,"The speaker mentioned peel, or at least something similar.","The speaker mentioned X, or at least something similar.",peel,emphasis,single word
+stretch-8.wav,The word pill was what she was trying to write,The word X was what she was trying to write,pill,stretch,single word
+stretch-9.wav,The phrase had fool somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,fool,stretch,single word
+emphasis-9.wav,I saw full written on the notepad.,I saw X written on the note pad.,full,emphasis,single word

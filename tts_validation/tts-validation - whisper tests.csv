@@ -1,0 +1,289 @@
+filename,phrase,question,word,model
+base-1.wav,"Ship was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",ship,base
+base-2.wav,"Sheep might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",sheep,base
+base-3.wav,"Pool was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",pool,base
+base-4.wav,"Pull might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",pull,base
+base-5.wav,"Cut was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",cut,base
+base-6.wav,"Cot could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",cot,base
+base-7.wav,I thought they said something about peel.,I thought they said something about X.,peel,base
+base-8.wav,I think the phrase ended with full.,I think the phrase ended with X,full,base
+base-9.wav,The word on the sign was pill.,The word on the sign was X,pill,base
+base-10.wav,"No, the text message definitely said fool.","No, the text message definitely said X",fool,base
+base-11.wav,I thought they ended their sentence with rut,I thought they ended their sentence with X,rut,base
+base-12.wav,It sounded like the last word they said was rot.,It sounded like the last word they said was X,rot,base
+base-13.wav,The word bean seemed important to the instructions.,The word X seemed important to the instructions.,bean,base
+base-14.wav,She kept mentioning bin during the conversation.,She kept mentioning X during the conversation.,bin,base
+base-15.wav,"The speaker mentioned wood, or at least something similar.","The speaker mentioned X, or at least something similar.",wood,base
+base-16.wav,The word wooed was what she was trying to write,The word X was what she was trying to write,wooed,base
+base-17.wav,The phrase had dull somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,dull,base
+base-18.wav,I saw doll written on the note pad.,I saw X written on the note pad.,doll,base
+base-19.wav,"doll was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",doll,base
+base-20.wav,"dull might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",dull,base
+base-21.wav,"Wood was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",wood,base
+base-22.wav,"Wooed might’ve been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",wooed,base
+base-23.wav,"bean was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",bean,base
+base-24.wav,"bin could’ve been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",bin,base
+base-25.wav,I thought they said something about rot.,I thought they said something about X.,rot,base
+base-26.wav,I think the phrase ended with rut.,I think the phrase ended with X,rut,base
+base-27.wav,The word on the sign was ship.,The word on the sign was X,ship,base
+base-28.wav,"No, the text message definitely said sheep.","No, the text message definitely said X",sheep,base
+base-29.wav,I thought they ended their sentence with pool,I thought they ended their sentence with X,pool,base
+base-30.wav,It sounded like the last word they said was pull.,It sounded like the last word they said was X,pull,base
+base-31.wav,The word cut seemed important to the instructions.,The word X seemed important to the instructions.,cut,base
+base-32.wav,She kept mentioning cot during the conversation.,She kept mentioning X during the conversation.,cot,base
+base-33.wav,"The speaker mentioned peel, or at least something similar.","The speaker mentioned X, or at least something similar.",peel,base
+base-34.wav,The word pill was what she was trying to write,The word X was what she was trying to write,pill,base
+base-35.wav,The phrase had fool somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,fool,base
+base-36.wav,I saw full written on the note pad.,I saw X written on the note pad.,full,base
+base-37.wav,"The sign mentioned sin, but the person said scene.","The sign mentioned X, but the person said X.","sin, scene",base
+base-38.wav,"The sign mentioned scene, but the person said sin.","The sign mentioned X, but the person said X.","scene, sin",base
+base-39.wav,There was confusion between cup and cop in their speech.,There was confusion between X and X in their speech.,"cup, cop",base
+base-40.wav,There was confusion between cop and cup in their speech.,There was confusion between X and X in their speech.,"cop, cup",base
+base-41.wav,"He wrote down luke, but remembered it as look.","He wrote down X, but remembered it as X.","luke, look",base
+base-42.wav,"He wrote down look, but remembered it as luke","He wrote down X, but remembered it as X","look, luke",base
+base-43.wav,"The paper mentioned bit, yet he is telling me knot.","The paper mentioned X, yet he is telling me X.","bit, knot",base
+base-44.wav,"The paper mentioned beat, yet he is telling me nut.","The paper mentioned X, yet he is telling me X.","beat, nut",base
+base-45.wav,I am not sure if the word was could or if keyed was the right one,I am not sure if the word was X or if X was the right one,"could, keyed",base
+base-46.wav,I am not sure if the word was cooed or if kid was the right one,I am not sure if the word was X or if X was the right one,"cooed, kid",base
+base-47.wav,Now note down heat and the word hut on the bottom,Now note down X and the word X on the bottom,"heat, hut",base
+base-48.wav,Now note down hit on the hat and the bottom,Now note down X and the word X on the bottom,"hit, hut",base
+base-49.wav,"The sign mentioned could, but the person said cooed.","The sign mentioned X, but the person said X.","could, cooed",base
+base-50.wav,"The sign mentioned cooed, but the person said could.","The sign mentioned X, but the person said X.","cooed, could",base
+base-51.wav,There was confusion between kid and keyed in their speech.,There was confusion between X and X in their speech.,"kid, keyed",base
+base-52.wav,There was confusion between keyed and kid in their speech.,There was confusion between X and X in their speech.,"keyed, kid",base
+base-53.wav,"He wrote down hut, but remembered it as hat.","He wrote down X, but remembered it as X.","hut, hat",base
+base-54.wav,"He wrote down hat, but remembered it as hut","He wrote down X, but remembered it as X.","hat, hut",base
+base-55.wav,"The paper mentioned nut, yet he is telling me heat.","The paper mentioned X, yet he is telling me X.","nut, heat",base
+base-56.wav,"The paper mentioned knot, yet he is telling me hit.","The paper mentioned X, yet he is telling me X.","knot, hit",base
+base-57.wav,I am not sure if the word was scene or if cup was the right one,I am not sure if the word was X or if X was the right one,"scene, cup",base
+base-58.wav,I am not sure if the word was sin or if cop was the right one,I am not sure if the word was X or if X was the right one,"sin, cop",base
+base-59.wav,Now note down beat and the word look on the bottom,Now note down X and the word X on the bottom,"beat, look",base
+base-60.wav,Now note down bit and the word luke on the bottom,Now note down X and the word X on the bottom,"bit, luke",base
+base-61.wav,He whispered about hearing someone say pill and cup nearby.,He whispered about hearing someone say X and x nearby.,"pill, cup",base
+base-62.wav,He whispered about hearing someone say peel and cop nearby.,He whispered about hearing someone say x and x nearby.,"peel, cop",base
+base-63.wav,The presenter said dull but I think he meant but.,The presenter said X but I think he meant X.,"dull, but",base
+base-64.wav,The presenter said doll but I think he meant bought.,The presenter said X but I think he meant x.,"doll, bought",base
+base-65.wav,Please write down the words reap and rot on your paper.,Please write down the words X and X on your paper.,"reap, rot",base
+base-66.wav,Please right down the words rip and rut on your paper.,Please right down the words X and X on your paper.,"rip, rut",base
+base-67.wav,He whispered about hearing someone say but and rip nearby.,He whispered about hearing someone say X and X nearby.,"but, rip",base
+base-68.wav,He whispered about hearing someone say bought and reap nearby.,He whispered about hearing someone say X and X nearby.,"bought, reap",base
+base-69.wav,The presenter said peel but I think he meant rot.,The presenter said X but I think he meant X.,"peel, rot",base
+base-70.wav,The presenter said pill but I think he meant rut.,The presenter said X but I think he meant X.,"pill, rut",base
+base-71.wav,Please write down the words cup and dull on your paper.,Please write down the words X and X on your paper.,"cup, dull",base
+base-72.wav,Please right down the words cop and doll on your paper.,Please right down the words X and X on your paper.,"cop, doll",base
+clarity-1.wav,"Ship was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",ship,clarity
+clarity-2.wav,"Sheep might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",sheep,clarity
+clarity-3.wav,"Pool was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",pool,clarity
+clarity-4.wav,"Pull might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",pull,clarity
+clarity-5.wav,"Cut was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",cut,clarity
+clarity-6.wav,"Cot could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",cot,clarity
+clarity-7.wav,I thought they said something about peel.,I thought they said something about X.,peel,clarity
+clarity-8.wav,I think the phrase ended with full.,I think the phrase ended with X,full,clarity
+clarity-9.wav,The word on the sign was pill.,The word on the sign was X,pill,clarity
+clarity-10.wav,"No, the text message definitely said fool.","No, the text message definitely said X",fool,clarity
+clarity-11.wav,I thought they ended their sentence with rut,I thought they ended their sentence with X,rut,clarity
+clarity-12.wav,It sounded like the last word they said was rot.,It sounded like the last word they said was X,rot,clarity
+clarity-13.wav,The word bean seemed important to the instructions.,The word X seemed important to the instructions.,bean,clarity
+clarity-14.wav,She kept mentioning bin during the conversation.,She kept mentioning X during the conversation.,bin,clarity
+clarity-15.wav,"The speaker mentioned wood, or at least something similar.","The speaker mentioned X, or at least something similar.",wood,clarity
+clarity-16.wav,The word wooed was what she was trying to write,The word X was what she was trying to write,wooed,clarity
+clarity-17.wav,The phrase had dull somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,dull,clarity
+clarity-18.wav,I saw doll written on the note pad.,I saw X written on the note pad.,doll,clarity
+clarity-19.wav,"doll was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",doll,clarity
+clarity-20.wav,"dull might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",dull,clarity
+clarity-21.wav,"Wood was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",wood,clarity
+clarity-22.wav,"Wooed might’ve been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",wooed,clarity
+clarity-23.wav,"bean was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",bean,clarity
+clarity-24.wav,"bin could’ve been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",bin,clarity
+clarity-25.wav,I thought they said something about rot.,I thought they said something about X.,rot,clarity
+clarity-26.wav,I think the phrase ended with rut.,I think the phrase ended with X,rut,clarity
+clarity-27.wav,The word on the sign was ship.,The word on the sign was X,ship,clarity
+clarity-28.wav,"No, the text message definitely said sheep.","No, the text message definitely said X",sheep,clarity
+clarity-29.wav,I thought they ended their sentence with pool,I thought they ended their sentence with X,pool,clarity
+clarity-30.wav,It sounded like the last word they said was pull.,It sounded like the last word they said was X,pull,clarity
+clarity-31.wav,The word cut seemed important to the instructions.,The word X seemed important to the instructions.,cut,clarity
+clarity-32.wav,She kept mentioning cot during the conversation.,She kept mentioning X during the conversation.,cot,clarity
+clarity-33.wav,"The speaker mentioned peel, or at least something similar.","The speaker mentioned X, or at least something similar.",peel,clarity
+clarity-34.wav,The word pill was what she was trying to write,The word X was what she was trying to write,pill,clarity
+clarity-35.wav,The phrase had fool somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,fool,clarity
+clarity-36.wav,I saw full written on the note pad.,I saw X written on the note pad.,full,clarity
+clarity-37.wav,"The sign mentioned sin, but the person said scene.","The sign mentioned X, but the person said X.","sin, scene",clarity
+clarity-38.wav,"The sign mentioned scene, but the person said sin.","The sign mentioned X, but the person said X.","scene, sin",clarity
+clarity-39.wav,There was confusion between cup and cop in their speech.,There was confusion between X and X in their speech.,"cup, cop",clarity
+clarity-40.wav,There was confusion between cop and cup in their speech.,There was confusion between X and X in their speech.,"cop, cup",clarity
+clarity-41.wav,"He wrote down luke, but remembered it as look.","He wrote down X, but remembered it as X.","luke, look",clarity
+clarity-42.wav,"He wrote down look, but remembered it as luke","He wrote down X, but remembered it as X","look, luke",clarity
+clarity-43.wav,"The paper mentioned bit, yet he is telling me knot.","The paper mentioned X, yet he is telling me X.","bit, knot",clarity
+clarity-44.wav,"The paper mentioned beat, yet he is telling me nut.","The paper mentioned X, yet he is telling me X.","beat, nut",clarity
+clarity-45.wav,I am not sure if the word was could or if keyed was the right one,I am not sure if the word was X or if X was the right one,"could, keyed",clarity
+clarity-46.wav,I am not sure if the word was cooed or if kid was the right one,I am not sure if the word was X or if X was the right one,"cooed, kid",clarity
+clarity-47.wav,Now note down heat and the word hut on the bottom,Now note down X and the word X on the bottom,"heat, hut",clarity
+clarity-48.wav,Now note down hit on the hat and the bottom,Now note down X and the word X on the bottom,"hit, hut",clarity
+clarity-49.wav,"The sign mentioned could, but the person said cooed.","The sign mentioned X, but the person said X.","could, cooed",clarity
+clarity-50.wav,"The sign mentioned cooed, but the person said could.","The sign mentioned X, but the person said X.","cooed, could",clarity
+clarity-51.wav,There was confusion between kid and keyed in their speech.,There was confusion between X and X in their speech.,"kid, keyed",clarity
+clarity-52.wav,There was confusion between keyed and kid in their speech.,There was confusion between X and X in their speech.,"keyed, kid",clarity
+clarity-53.wav,"He wrote down hut, but remembered it as hat.","He wrote down X, but remembered it as X.","hut, hat",clarity
+clarity-54.wav,"He wrote down hat, but remembered it as hut","He wrote down X, but remembered it as X.","hat, hut",clarity
+clarity-55.wav,"The paper mentioned nut, yet he is telling me heat.","The paper mentioned X, yet he is telling me X.","nut, heat",clarity
+clarity-56.wav,"The paper mentioned knot, yet he is telling me hit.","The paper mentioned X, yet he is telling me X.","knot, hit",clarity
+clarity-57.wav,I am not sure if the word was scene or if cup was the right one,I am not sure if the word was X or if X was the right one,"scene, cup",clarity
+clarity-58.wav,I am not sure if the word was sin or if cop was the right one,I am not sure if the word was X or if X was the right one,"sin, cop",clarity
+clarity-59.wav,Now note down beat and the word look on the bottom,Now note down X and the word X on the bottom,"beat, look",clarity
+clarity-60.wav,Now note down bit and the word luke on the bottom,Now note down X and the word X on the bottom,"bit, luke",clarity
+clarity-61.wav,He whispered about hearing someone say pill and cup nearby.,He whispered about hearing someone say X and x nearby.,"pill, cup",clarity
+clarity-62.wav,He whispered about hearing someone say peel and cop nearby.,He whispered about hearing someone say x and x nearby.,"peel, cop",clarity
+clarity-63.wav,The presenter said dull but I think he meant but.,The presenter said X but I think he meant X.,"dull, but",clarity
+clarity-64.wav,The presenter said doll but I think he meant bought.,The presenter said X but I think he meant x.,"doll, bought",clarity
+clarity-65.wav,Please write down the words reap and rot on your paper.,Please write down the words X and X on your paper.,"reap, rot",clarity
+clarity-66.wav,Please right down the words rip and rut on your paper.,Please right down the words X and X on your paper.,"rip, rut",clarity
+clarity-67.wav,He whispered about hearing someone say but and rip nearby.,He whispered about hearing someone say X and X nearby.,"but, rip",clarity
+clarity-68.wav,He whispered about hearing someone say bought and reap nearby.,He whispered about hearing someone say X and X nearby.,"bought, reap",clarity
+clarity-69.wav,The presenter said peel but I think he meant rot.,The presenter said X but I think he meant X.,"peel, rot",clarity
+clarity-70.wav,The presenter said pill but I think he meant rut.,The presenter said X but I think he meant X.,"pill, rut",clarity
+clarity-71.wav,Please write down the words cup and dull on your paper.,Please write down the words X and X on your paper.,"cup, dull",clarity
+clarity-72.wav,Please right down the words cop and doll on your paper.,Please right down the words X and X on your paper.,"cop, doll",clarity
+stretch-1.wav,"Ship was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",ship,stretch
+stretch-2.wav,"Sheep might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",sheep,stretch
+stretch-3.wav,"Pool was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",pool,stretch
+stretch-4.wav,"Pull might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",pull,stretch
+stretch-5.wav,"Cut was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",cut,stretch
+stretch-6.wav,"Cot could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",cot,stretch
+stretch-7.wav,I thought they said something about peel.,I thought they said something about X.,peel,stretch
+stretch-8.wav,I think the phrase ended with full.,I think the phrase ended with X,full,stretch
+stretch-9.wav,The word on the sign was pill.,The word on the sign was X,pill,stretch
+stretch-10.wav,"No, the text message definitely said fool.","No, the text message definitely said X",fool,stretch
+stretch-11.wav,I thought they ended their sentence with rut,I thought they ended their sentence with X,rut,stretch
+stretch-12.wav,It sounded like the last word they said was rot.,It sounded like the last word they said was X,rot,stretch
+stretch-13.wav,The word bean seemed important to the instructions.,The word X seemed important to the instructions.,bean,stretch
+stretch-14.wav,She kept mentioning bin during the conversation.,She kept mentioning X during the conversation.,bin,stretch
+stretch-15.wav,"The speaker mentioned wood, or at least something similar.","The speaker mentioned X, or at least something similar.",wood,stretch
+stretch-16.wav,The word wooed was what she was trying to write,The word X was what she was trying to write,wooed,stretch
+stretch-17.wav,The phrase had dull somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,dull,stretch
+stretch-18.wav,I saw doll written on the note pad.,I saw X written on the note pad.,doll,stretch
+stretch-19.wav,"doll was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",doll,stretch
+stretch-20.wav,"dull might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",dull,stretch
+stretch-21.wav,"Wood was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",wood,stretch
+stretch-22.wav,"Wooed might’ve been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",wooed,stretch
+stretch-23.wav,"bean was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",bean,stretch
+stretch-24.wav,"bin could’ve been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",bin,stretch
+stretch-25.wav,I thought they said something about rot.,I thought they said something about X.,rot,stretch
+stretch-26.wav,I think the phrase ended with rut.,I think the phrase ended with X,rut,stretch
+stretch-27.wav,The word on the sign was ship.,The word on the sign was X,ship,stretch
+stretch-28.wav,"No, the text message definitely said sheep.","No, the text message definitely said X",sheep,stretch
+stretch-29.wav,I thought they ended their sentence with pool,I thought they ended their sentence with X,pool,stretch
+stretch-30.wav,It sounded like the last word they said was pull.,It sounded like the last word they said was X,pull,stretch
+stretch-31.wav,The word cut seemed important to the instructions.,The word X seemed important to the instructions.,cut,stretch
+stretch-32.wav,She kept mentioning cot during the conversation.,She kept mentioning X during the conversation.,cot,stretch
+stretch-33.wav,"The speaker mentioned peel, or at least something similar.","The speaker mentioned X, or at least something similar.",peel,stretch
+stretch-34.wav,The word pill was what she was trying to write,The word X was what she was trying to write,pill,stretch
+stretch-35.wav,The phrase had fool somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,fool,stretch
+stretch-36.wav,I saw full written on the note pad.,I saw X written on the note pad.,full,stretch
+stretch-37.wav,"The sign mentioned sin, but the person said scene.","The sign mentioned X, but the person said X.","sin, scene",stretch
+stretch-38.wav,"The sign mentioned scene, but the person said sin.","The sign mentioned X, but the person said X.","scene, sin",stretch
+stretch-39.wav,There was confusion between cup and cop in their speech.,There was confusion between X and X in their speech.,"cup, cop",stretch
+stretch-40.wav,There was confusion between cop and cup in their speech.,There was confusion between X and X in their speech.,"cop, cup",stretch
+stretch-41.wav,"He wrote down luke, but remembered it as look.","He wrote down X, but remembered it as X.","luke, look",stretch
+stretch-42.wav,"He wrote down look, but remembered it as luke","He wrote down X, but remembered it as X","look, luke",stretch
+stretch-43.wav,"The paper mentioned bit, yet he is telling me knot.","The paper mentioned X, yet he is telling me X.","bit, knot",stretch
+stretch-44.wav,"The paper mentioned beat, yet he is telling me nut.","The paper mentioned X, yet he is telling me X.","beat, nut",stretch
+stretch-45.wav,I am not sure if the word was could or if keyed was the right one,I am not sure if the word was X or if X was the right one,"could, keyed",stretch
+stretch-46.wav,I am not sure if the word was cooed or if kid was the right one,I am not sure if the word was X or if X was the right one,"cooed, kid",stretch
+stretch-47.wav,Now note down heat and the word hut on the bottom,Now note down X and the word X on the bottom,"heat, hut",stretch
+stretch-48.wav,Now note down hit on the hat and the bottom,Now note down X and the word X on the bottom,"hit, hut",stretch
+stretch-49.wav,"The sign mentioned could, but the person said cooed.","The sign mentioned X, but the person said X.","could, cooed",stretch
+stretch-50.wav,"The sign mentioned cooed, but the person said could.","The sign mentioned X, but the person said X.","cooed, could",stretch
+stretch-51.wav,There was confusion between kid and keyed in their speech.,There was confusion between X and X in their speech.,"kid, keyed",stretch
+stretch-52.wav,There was confusion between keyed and kid in their speech.,There was confusion between X and X in their speech.,"keyed, kid",stretch
+stretch-53.wav,"He wrote down hut, but remembered it as hat.","He wrote down X, but remembered it as X.","hut, hat",stretch
+stretch-54.wav,"He wrote down hat, but remembered it as hut","He wrote down X, but remembered it as X.","hat, hut",stretch
+stretch-55.wav,"The paper mentioned nut, yet he is telling me heat.","The paper mentioned X, yet he is telling me X.","nut, heat",stretch
+stretch-56.wav,"The paper mentioned knot, yet he is telling me hit.","The paper mentioned X, yet he is telling me X.","knot, hit",stretch
+stretch-57.wav,I am not sure if the word was scene or if cup was the right one,I am not sure if the word was X or if X was the right one,"scene, cup",stretch
+stretch-58.wav,I am not sure if the word was sin or if cop was the right one,I am not sure if the word was X or if X was the right one,"sin, cop",stretch
+stretch-59.wav,Now note down beat and the word look on the bottom,Now note down X and the word X on the bottom,"beat, look",stretch
+stretch-60.wav,Now note down bit and the word luke on the bottom,Now note down X and the word X on the bottom,"bit, luke",stretch
+stretch-61.wav,He whispered about hearing someone say pill and cup nearby.,He whispered about hearing someone say X and x nearby.,"pill, cup",stretch
+stretch-62.wav,He whispered about hearing someone say peel and cop nearby.,He whispered about hearing someone say x and x nearby.,"peel, cop",stretch
+stretch-63.wav,The presenter said dull but I think he meant but.,The presenter said X but I think he meant X.,"dull, but",stretch
+stretch-64.wav,The presenter said doll but I think he meant bought.,The presenter said X but I think he meant x.,"doll, bought",stretch
+stretch-65.wav,Please write down the words reap and rot on your paper.,Please write down the words X and X on your paper.,"reap, rot",stretch
+stretch-66.wav,Please right down the words rip and rut on your paper.,Please right down the words X and X on your paper.,"rip, rut",stretch
+stretch-67.wav,He whispered about hearing someone say but and rip nearby.,He whispered about hearing someone say X and X nearby.,"but, rip",stretch
+stretch-68.wav,He whispered about hearing someone say bought and reap nearby.,He whispered about hearing someone say X and X nearby.,"bought, reap",stretch
+stretch-69.wav,The presenter said peel but I think he meant rot.,The presenter said X but I think he meant X.,"peel, rot",stretch
+stretch-70.wav,The presenter said pill but I think he meant rut.,The presenter said X but I think he meant X.,"pill, rut",stretch
+stretch-71.wav,Please write down the words cup and dull on your paper.,Please write down the words X and X on your paper.,"cup, dull",stretch
+stretch-72.wav,Please right down the words cop and doll on your paper.,Please right down the words X and X on your paper.,"cop, doll",stretch
+emphasis-1.wav,"Ship was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",ship,emphasis
+emphasis-2.wav,"Sheep might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",sheep,emphasis
+emphasis-3.wav,"Pool was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",pool,emphasis
+emphasis-4.wav,"Pull might have been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",pull,emphasis
+emphasis-5.wav,"Cut was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",cut,emphasis
+emphasis-6.wav,"Cot could have been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",cot,emphasis
+emphasis-7.wav,I thought they said something about peel.,I thought they said something about X.,peel,emphasis
+emphasis-8.wav,I think the phrase ended with full.,I think the phrase ended with X,full,emphasis
+emphasis-9.wav,The word on the sign was pill.,The word on the sign was X,pill,emphasis
+emphasis-10.wav,"No, the text message definitely said fool.","No, the text message definitely said X",fool,emphasis
+emphasis-11.wav,I thought they ended their sentence with rut,I thought they ended their sentence with X,rut,emphasis
+emphasis-12.wav,It sounded like the last word they said was rot.,It sounded like the last word they said was X,rot,emphasis
+emphasis-13.wav,The word bean seemed important to the instructions.,The word X seemed important to the instructions.,bean,emphasis
+emphasis-14.wav,She kept mentioning bin during the conversation.,She kept mentioning X during the conversation.,bin,emphasis
+emphasis-15.wav,"The speaker mentioned wood, or at least something similar.","The speaker mentioned X, or at least something similar.",wood,emphasis
+emphasis-16.wav,The word wooed was what she was trying to write,The word X was what she was trying to write,wooed,emphasis
+emphasis-17.wav,The phrase had dull somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,dull,emphasis
+emphasis-18.wav,I saw doll written on the note pad.,I saw X written on the note pad.,doll,emphasis
+emphasis-19.wav,"doll was what I heard, but maybe I misunderstood.","X was what I heard, but maybe I misunderstood.",doll,emphasis
+emphasis-20.wav,"dull might have been what they meant, but it wasn’t clear.","X might have been what they meant, but it wasn’t clear.",dull,emphasis
+emphasis-21.wav,"Wood was the word I caught, though it could’ve been something else.","X was the word I caught, though it could’ve been something else.",wood,emphasis
+emphasis-22.wav,"Wooed might’ve been what they were talking about, but I’m unsure","X might’ve been what they were talking about, but I’m unsure",wooed,emphasis
+emphasis-23.wav,"bean was the word used, but it seemed odd in context.","X was the word used, but it seemed odd in context.",bean,emphasis
+emphasis-24.wav,"bin could’ve been the intention, but I wasn’t sure.","X could’ve been the intention, but I wasn’t sure.",bin,emphasis
+emphasis-25.wav,I thought they said something about rot.,I thought they said something about X.,rot,emphasis
+emphasis-26.wav,I think the phrase ended with rut.,I think the phrase ended with X,rut,emphasis
+emphasis-27.wav,The word on the sign was ship.,The word on the sign was X,ship,emphasis
+emphasis-28.wav,"No, the text message definitely said sheep.","No, the text message definitely said X",sheep,emphasis
+emphasis-29.wav,I thought they ended their sentence with pool,I thought they ended their sentence with X,pool,emphasis
+emphasis-30.wav,It sounded like the last word they said was pull.,It sounded like the last word they said was X,pull,emphasis
+emphasis-31.wav,The word cut seemed important to the instructions.,The word X seemed important to the instructions.,cut,emphasis
+emphasis-32.wav,She kept mentioning cot during the conversation.,She kept mentioning X during the conversation.,cot,emphasis
+emphasis-33.wav,"The speaker mentioned peel, or at least something similar.","The speaker mentioned X, or at least something similar.",peel,emphasis
+emphasis-34.wav,The word pill was what she was trying to write,The word X was what she was trying to write,pill,emphasis
+emphasis-35.wav,The phrase had fool somewhere in the middle of it.,The phrase had X somewhere in the middle of it.,fool,emphasis
+emphasis-36.wav,I saw full written on the note pad.,I saw X written on the note pad.,full,emphasis
+emphasis-37.wav,"The sign mentioned sin, but the person said scene.","The sign mentioned X, but the person said X.","sin, scene",emphasis
+emphasis-38.wav,"The sign mentioned scene, but the person said sin.","The sign mentioned X, but the person said X.","scene, sin",emphasis
+emphasis-39.wav,There was confusion between cup and cop in their speech.,There was confusion between X and X in their speech.,"cup, cop",emphasis
+emphasis-40.wav,There was confusion between cop and cup in their speech.,There was confusion between X and X in their speech.,"cop, cup",emphasis
+emphasis-41.wav,"He wrote down luke, but remembered it as look.","He wrote down X, but remembered it as X.","luke, look",emphasis
+emphasis-42.wav,"He wrote down look, but remembered it as luke","He wrote down X, but remembered it as X","look, luke",emphasis
+emphasis-43.wav,"The paper mentioned bit, yet he is telling me knot.","The paper mentioned X, yet he is telling me X.","bit, knot",emphasis
+emphasis-44.wav,"The paper mentioned beat, yet he is telling me nut.","The paper mentioned X, yet he is telling me X.","beat, nut",emphasis
+emphasis-45.wav,I am not sure if the word was could or if keyed was the right one,I am not sure if the word was X or if X was the right one,"could, keyed",emphasis
+emphasis-46.wav,I am not sure if the word was cooed or if kid was the right one,I am not sure if the word was X or if X was the right one,"cooed, kid",emphasis
+emphasis-47.wav,Now note down heat and the word hut on the bottom,Now note down X and the word X on the bottom,"heat, hut",emphasis
+emphasis-48.wav,Now note down hit on the hat and the bottom,Now note down X and the word X on the bottom,"hit, hut",emphasis
+emphasis-49.wav,"The sign mentioned could, but the person said cooed.","The sign mentioned X, but the person said X.","could, cooed",emphasis
+emphasis-50.wav,"The sign mentioned cooed, but the person said could.","The sign mentioned X, but the person said X.","cooed, could",emphasis
+emphasis-51.wav,There was confusion between kid and keyed in their speech.,There was confusion between X and X in their speech.,"kid, keyed",emphasis
+emphasis-52.wav,There was confusion between keyed and kid in their speech.,There was confusion between X and X in their speech.,"keyed, kid",emphasis
+emphasis-53.wav,"He wrote down hut, but remembered it as hat.","He wrote down X, but remembered it as X.","hut, hat",emphasis
+emphasis-54.wav,"He wrote down hat, but remembered it as hut","He wrote down X, but remembered it as X.","hat, hut",emphasis
+emphasis-55.wav,"The paper mentioned nut, yet he is telling me heat.","The paper mentioned X, yet he is telling me X.","nut, heat",emphasis
+emphasis-56.wav,"The paper mentioned knot, yet he is telling me hit.","The paper mentioned X, yet he is telling me X.","knot, hit",emphasis
+emphasis-57.wav,I am not sure if the word was scene or if cup was the right one,I am not sure if the word was X or if X was the right one,"scene, cup",emphasis
+emphasis-58.wav,I am not sure if the word was sin or if cop was the right one,I am not sure if the word was X or if X was the right one,"sin, cop",emphasis
+emphasis-59.wav,Now note down beat and the word look on the bottom,Now note down X and the word X on the bottom,"beat, look",emphasis
+emphasis-60.wav,Now note down bit and the word luke on the bottom,Now note down X and the word X on the bottom,"bit, luke",emphasis
+emphasis-61.wav,He whispered about hearing someone say pill and cup nearby.,He whispered about hearing someone say X and x nearby.,"pill, cup",emphasis
+emphasis-62.wav,He whispered about hearing someone say peel and cop nearby.,He whispered about hearing someone say x and x nearby.,"peel, cop",emphasis
+emphasis-63.wav,The presenter said dull but I think he meant but.,The presenter said X but I think he meant X.,"dull, but",emphasis
+emphasis-64.wav,The presenter said doll but I think he meant bought.,The presenter said X but I think he meant x.,"doll, bought",emphasis
+emphasis-65.wav,Please write down the words reap and rot on your paper.,Please write down the words X and X on your paper.,"reap, rot",emphasis
+emphasis-66.wav,Please right down the words rip and rut on your paper.,Please right down the words X and X on your paper.,"rip, rut",emphasis
+emphasis-67.wav,He whispered about hearing someone say but and rip nearby.,He whispered about hearing someone say X and X nearby.,"but, rip",emphasis
+emphasis-68.wav,He whispered about hearing someone say bought and reap nearby.,He whispered about hearing someone say X and X nearby.,"bought, reap",emphasis
+emphasis-69.wav,The presenter said peel but I think he meant rot.,The presenter said X but I think he meant X.,"peel, rot",emphasis
+emphasis-70.wav,The presenter said pill but I think he meant rut.,The presenter said X but I think he meant X.,"pill, rut",emphasis
+emphasis-71.wav,Please write down the words cup and dull on your paper.,Please write down the words X and X on your paper.,"cup, dull",emphasis
+stretch-72.wav,Please right down the words cop and doll on your paper.,Please right down the words X and X on your paper.,"cop, doll",emphasis
